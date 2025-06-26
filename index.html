@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>PDF Order Analiz </title>
+  <title>PDF Order Analiz (JS)</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -36,18 +36,40 @@
       -webkit-text-fill-color: transparent;
     }
 
-    input[type="file"] {
-      width: 100%;
-      padding: 12px;
-      margin-top: 20px;
-      border: 2px dashed #ccc;
-      border-radius: 10px;
-      transition: 0.3s;
-      cursor: pointer;
+    /* GİZLİ DOSYA INPUTU */
+    #fileInput {
+      display: none;
     }
 
-    input[type="file"]:hover {
+    .custom-file-upload {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px dashed #ccc;
+      color: #555;
+      transition: all 0.3s;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .custom-file-upload:hover {
+      background-color: #e9f6ff;
       border-color: #007cf0;
+      color: #007cf0;
+    }
+
+    .filename-bar {
+      margin-top: 15px;
+      background-color: #e1f5fe;
+      border-left: 5px solid #00bcd4;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: #007a8f;
+      font-weight: 500;
+      display: none;
+      text-align: left;
     }
 
     button {
@@ -110,13 +132,30 @@
 <body>
   <div class="container">
     <h2>PDF Order Analiz</h2>
-    <input type="file" id="fileInput" accept=".pdf">
-    <br>
+
+    <!-- GİZLİ DOSYA INPUTU VE GÖRSEL BUTON -->
+    <label class="custom-file-upload">
+      PDF Seç (Order içeren)
+      <input type="file" id="fileInput" accept=".pdf" onchange="showFileName()">
+    </label>
+
+    <!-- DOSYA SEÇİLDİĞİNDE GÖRÜNEN BİLGİ BARI -->
+    <div id="filenameBar" class="filename-bar"></div>
+
     <button onclick="analyzePDF()">Yükle ve Analiz Et</button>
     <div id="output"></div>
   </div>
 
   <script>
+    function showFileName() {
+      const fileInput = document.getElementById('fileInput');
+      const filenameBar = document.getElementById('filenameBar');
+      if (fileInput.files.length > 0) {
+        filenameBar.innerText = `Seçilen dosya: ${fileInput.files[0].name}`;
+        filenameBar.style.display = 'block';
+      }
+    }
+
     async function analyzePDF() {
       const file = document.getElementById('fileInput').files[0];
       if (!file) {
