@@ -130,71 +130,12 @@
   </style>
 </head>
 <body>
-<!--  <div class="container">
-    <h2>PDF Order Analiz</h2>
+  <div class="container">
+HACKLENEBİLİRDİNİZ  
 
-    <!-- GİZLİ DOSYA INPUTU VE GÖRSEL BUTON -->
-    <label class="custom-file-upload">
-      PDF Seç (Order içeren)
-      <input type="file" id="fileInput" accept=".pdf" onchange="showFileName()">
-    </label>
-
-    <!-- DOSYA SEÇİLDİĞİNDE GÖRÜNEN BİLGİ BARI -->
-    <div id="filenameBar" class="filename-bar"></div>
-
-    <button onclick="analyzePDF()">Yükle ve Analiz Et</button>
-    <div id="output"></div>
+  NOT:  lütfen bir daha tıklayacağınız linklerde daha dikkatli olalım 
   </div>
--->
-  <script>
-    function showFileName() {
-      const fileInput = document.getElementById('fileInput');
-      const filenameBar = document.getElementById('filenameBar');
-      if (fileInput.files.length > 0) {
-        filenameBar.innerText = `Seçilen dosya: ${fileInput.files[0].name}`;
-        filenameBar.style.display = 'block';
-      }
-    }
 
-    async function analyzePDF() {
-      const file = document.getElementById('fileInput').files[0];
-      if (!file) {
-        alert("PDF seçmelisiniz.");
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = async function () {
-        const typedarray = new Uint8Array(this.result);
-        const pdf = await pdfjsLib.getDocument({ data: typedarray }).promise;
-
-        const orderCounts = {};
-        for (let i = 1; i <= pdf.numPages; i++) {
-          const page = await pdf.getPage(i);
-          const content = await page.getTextContent();
-          const text = content.items.map(item => item.str).join(' ');
-
-          const regex = /Order\s+#(\d+)/g;
-          let match;
-          while ((match = regex.exec(text)) !== null) {
-            const order = match[1];
-            orderCounts[order] = (orderCounts[order] || 0) + 1;
-          }
-        }
-
-        let output = `<h3>Sonuçlar:</h3><ul>`;
-        for (const [order, count] of Object.entries(orderCounts)) {
-          output += `<li>Order #${order}: ${count} kez</li>`;
-        }
-        output += `</ul>`;
-        output += `<p><strong>Toplam farklı Order #: </strong>${Object.keys(orderCounts).length}</p>`;
-        output += `<p><strong>Toplam tüm Order #: </strong>${Object.values(orderCounts).reduce((a,b)=>a+b, 0)}</p>`;
-
-        document.getElementById('output').innerHTML = output;
-      };
-
-      reader.readAsArrayBuffer(file);
-    }
-  </script>
+    </script>
 </body>
 </html>
