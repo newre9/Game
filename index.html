@@ -2,140 +2,111 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>PDF Order Analiz (JS)</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <title>Güvenlik Uyarısı</title>
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, #f6d365, #fda085);
       margin: 0;
-      padding: 40px 20px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #ff6a6a, #ffb86b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
 
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: #ffffff;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      max-width: 500px;
       text-align: center;
+      animation: fadeIn 1s ease;
     }
 
-    h2 {
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .icon {
+      font-size: 70px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #e53935;
+      margin-bottom: 15px;
+    }
+
+    p {
       color: #333;
-      font-weight: 600;
-      font-size: 28px;
-      background: linear-gradient(to right, #007cf0, #00dfd8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 16px;
+      line-height: 1.6;
     }
 
-    /* GİZLİ DOSYA INPUTU */
-    #fileInput {
-      display: none;
-    }
-
-    .custom-file-upload {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: #f0f0f0;
-      border-radius: 8px;
-      cursor: pointer;
-      border: 2px dashed #ccc;
-      color: #555;
-      transition: all 0.3s;
+    .warning {
+      background: #fff3cd;
+      border-left: 5px solid #ff9800;
+      padding: 15px;
+      border-radius: 10px;
       margin-top: 20px;
-      width: 100%;
-    }
-
-    .custom-file-upload:hover {
-      background-color: #e9f6ff;
-      border-color: #007cf0;
-      color: #007cf0;
-    }
-
-    .filename-bar {
-      margin-top: 15px;
-      background-color: #e1f5fe;
-      border-left: 5px solid #00bcd4;
-      padding: 10px 15px;
-      border-radius: 8px;
-      color: #007a8f;
-      font-weight: 500;
-      display: none;
       text-align: left;
     }
 
     button {
       margin-top: 25px;
-      padding: 12px 30px;
-      background: linear-gradient(to right, #00dfd8, #007cf0);
+      padding: 12px 25px;
       border: none;
+      border-radius: 10px;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
       color: white;
       font-size: 16px;
-      font-weight: 600;
-      border-radius: 8px;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: 0.3s;
     }
 
     button:hover {
+      transform: scale(1.05);
       opacity: 0.9;
-      transform: scale(1.02);
-    }
-
-    #output {
-      margin-top: 30px;
-      text-align: left;
-      background-color: #f3f9ff;
-      padding: 20px;
-      border-radius: 12px;
-      border-left: 6px solid #007cf0;
-    }
-
-    #output h3 {
-      color: #007cf0;
-    }
-
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 6px;
-      color: #444;
-    }
-
-    p {
-      font-weight: 500;
-      color: #222;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 25px 20px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
     }
   </style>
 </head>
-<body>
-  <div class="container">
-HACKLENEBİLİRDİNİZ  
 
-  NOT:  lütfen bir daha tıklayacağınız linklerde daha dikkatli olalım 
+<body>
+
+<div class="card">
+
+  <!-- İKON -->
+  <div class="icon">⚠️</div>
+
+  <h1>HACKLENEBİLİRDİNİZ!</h1>
+
+  <p>
+    Tıkladığınız bu bağlantı kötü niyetli bir saldırı olabilirdi.
+    Bu bir <strong>siber güvenlik farkındalık simülasyonudur.</strong>
+  </p>
+
+  <div class="warning">
+    <strong>Dikkat!</strong><br><br>
+    • Bilinmeyen linklere tıklamayın<br>
+    • Kaynağı doğrulanmamış eklere güvenmeyin<br>
+    • Kişisel bilgilerinizi paylaşmayın
   </div>
 
-    </script>
+  <p style="margin-top:15px;">
+    Güvende kalmak için her zaman dikkatli olun.
+  </p>
+
+  <button onclick="alert('Harika! Artık daha dikkatlisin 😊')">
+    Anladım
+  </button>
+
+</div>
+
 </body>
 </html>
