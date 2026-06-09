@@ -1,120 +1,482 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Güvenlik Uyarısı</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAN Vakfı</title>
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, #ff6a6a, #ffb86b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .card {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-      max-width: 500px;
-      text-align: center;
-      animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .icon {
-      font-size: 70px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      color: #e53935;
-      margin-bottom: 15px;
-    }
-
-    p {
-      color: #333;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .warning {
-      background: #fff3cd;
-      border-left: 5px solid #ff9800;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 20px;
-      text-align: left;
-    }
-
-    button {
-      margin-top: 25px;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 10px;
-      background: linear-gradient(to right, #ff416c, #ff4b2b);
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
-  </style>
 </head>
 
 <body>
 
-<div class="card">
+<header class="navbar">
+ <div class="logo">
+  <a href="index.html">
+    <img src="ban_logo_kurdi-01.png" alt="BAN Vakfı Logo" class="logo-img">
+  </a>
+</div>
 
-  <!-- İKON -->
-  <div class="icon">⚠️</div>
-
-  <h1>HACKLENEBİLİRDİNİZ!</h1>
-
-  <p>
-    Tıkladığınız bu bağlantı kötü niyetli bir saldırı olabilirdi.
-    Bu bir <strong>siber güvenlik farkındalık simülasyonudur.</strong>
-  </p>
-
-  <div class="warning">
-    <strong>Dikkat!</strong><br><br>
-    • Bilinmeyen linklere tıklamayın<br>
-    • Kaynağı doğrulanmamış eklere güvenmeyin<br>
-    • Kişisel bilgilerinizi paylaşmayın
+  <div class="nav-right">
+    <!-- DİL SEÇİMİ -->
+  <div class="languages">
+  <span onclick="changeLang('tr')" class="lang-item">TR</span>
+  <span onclick="changeLang('ku')" class="lang-item">KU</span>
+  <span onclick="changeLang('en')" class="lang-item">EN</span>
   </div>
 
-  <p style="margin-top:15px;">
-    Güvende kalmak için her zaman dikkatli olun.
-  </p>
+    <!-- BURGER -->
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 
-  <button onclick="alert('Harika! Artık daha dikkatlisin 😊')">
-    Anladım
-  </button>
+  <!-- MENÜ -->
+  <nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Ana Sayfa</a>
+  <a href="#blog"><i class="fa-solid fa-pen-to-square"></i> Blog</a>
+  <a href="#podcast"><i class="fa-solid fa-microphone"></i> Podcast</a>
+  <a href="#team"><i class="fa-solid fa-users"></i> Üyeler</a>
+  <a href="#project"><i class="fa-solid fa-diagram-project"></i> Projeler</a>
+  <a href="about.html"><i class="fa-solid fa-circle-info"></i> Hakkımızda</a>
+  
+  <a href="#contact"><i class="fa-solid fa-envelope"></i> İletişim</a>
+</nav>
 
-</div>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P3H6KW5RX4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+</header>
 
-  gtag('config', 'G-P3H6KW5RX4');
-</script>
+
+<section class="video-hero">
+   <video autoplay muted loop playsinline>
+    <source src="head.mp4" type="video/mp4">
+    Tarayıcınız video etiketini desteklemiyor.
+  </video>
+
+  <!-- Gölge -->
+  <div class="video-overlay"></div>
+
+  <!-- İçerik -->
+  <div class="video-content">
+    <h1>Bilgi • Dayanışma • Gelecek</h1>
+    <p>BAN Vakfı Blog & Podcast Platformu</p>
+  </div>
+</section>
+
+<section id="podcast" class="podcast-section">
+    <h2>🎙️ Podcastlerimiz</h2>
+
+    <div class="podcast-grid">
+
+         <div class="podcast-card">
+          <a href="podcast_detail.html">
+            <img src="podcast_design/1/1.jpg" alt="Podcast">
+            </a>
+            <h3>Bölüm 2</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        
+
+        <div class="podcast-card">
+            <img src="podcast_design/2.BÖLÜM/2.BÖLÜM-01.jpg" alt="Podcast">
+            <h3>Bölüm 2</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="podcast-card">
+            <img src="podcast_design/3.BÖLÜM/3.BÖLÜM.jpg" alt="Podcast">
+            <h3>Bölüm 3</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="podcast-card">
+            <img src="podcast_design/4. BÖLÜM/4.BÖLÜM-1.jpg" alt="Podcast">
+            <h3>Bölüm 4</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+          <div class="podcast-card">
+            <img src="podcast_design/5.BÖLÜM/5.BÖLÜM-01.jpg" alt="Podcast">
+            <h3>Bölüm 4</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+ <div class="podcast-card">
+            <img src="podcast_design/6.BÖLÜM/6-BÖLÜM-01.jpg" alt="Podcast">
+            <h3>Bölüm 4</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+  
+   
+   
+</section>
+
+<!-- PODCAST MODAL -->
+
+
+
+<section id="blog" class="podcast-section">
+  <h2>📰 Blog Yazıları</h2>
+
+  <div class="blog-grid">
+
+    <article class="blog-card">
+      <div class="blog-image bg1">✍️</div>
+      <div class="blog-content">
+        <h3>Dayanışmanın Gücü</h3>
+        <p>Toplumsal birlikteliğin birey ve toplum üzerindeki etkileri.</p>
+        <a href="#">Devamını Oku →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-image bg2">🌱</div>
+      <div class="blog-content">
+        <h3>Gönüllülük Nedir?</h3>
+        <p>Gönüllü çalışmanın bireysel ve sosyal kazanımları.</p>
+        <a href="#">Devamını Oku →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-image bg3">📚</div>
+      <div class="blog-content">
+        <h3>Eğitim ve Gelecek</h3>
+        <p>Eğitim projelerinin toplum üzerindeki uzun vadeli etkileri.</p>
+        <a href="#">Devamını Oku →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="team" class="podcast-section">
+  <h2>👥 Ekibimiz</h2>
+
+  <div class="team-grid">
+
+    <div class="team-member">
+      <div class="circle bg1">
+        <img src="ban_kişiler/Ayşe-Tepe.png" alt="Ayşe Tepe">
+      </div>
+      <h3>Ayşe Tepe</h3>
+      <span>Koordinatör</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg2">
+        <img src="ban_kişiler/Dilan ÖZALP.png" alt="Dilan ÖZALP">
+      </div>
+      <h3>Dilan ÖZALP</h3>
+      <span>Koordinatör</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg3">
+        <img src="ban_kişiler/Diyar ARCAN.png" alt="Diyar ARCAN">
+      </div>
+      <h3>Diyar ARCAN</h3>
+      <span>Podcast Editörü</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg4">
+        <img src="ban_kişiler/Ferda ÖNEN CEMRİ.png" alt="Ferda ÖNEN CEMRİ">
+      </div>
+      <h3>Ferda ÖNEN CEMRİ</h3>
+      <span>İçerik Editörü</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg5">
+        <img src="ban_kişiler/GÜL HÜR.png" alt="Gül HÜR">
+      </div>
+      <h3>Gül HÜR</h3>
+      <span>İçerik Editörü</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg6">
+        <img src="ban_kişiler/Hasan ALACA.png" alt="Hasan ALACA">
+      </div>
+      <h3>Hasan ALACA</h3>
+      <span>İçerik Editörü</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg7">
+        <img src="ban_kişiler/Hilal AYDIN.png" alt="Hilal AYDIN">
+      </div>
+      <h3>Hilal AYDIN</h3>
+      <span>İçerik Editörü</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg8">
+        <img src="ban_kişiler/Mükrime TEPE.png" alt="Mükrime TEPE">
+      </div>
+      <h3>Mükrime TEPE</h3>
+      <span>İçerik Editörü</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg9">
+        <img src="ban_kişiler/Osman AKAN.png" alt="Osman AKAN">
+      </div>
+      <h3>Osman AKAN</h3>
+      <span>İçerik Editörü</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg10">
+        <img src="ban_kişiler/Pervin ZENDERLİOĞLU.png" alt="Pervin ZENDERLİOĞLU">
+      </div>
+      <h3>Pervin ZENDERLİOĞLU</h3>
+      <span>İçerik Editörü</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg11">
+        <img src="ban_kişiler/Zeynep YAŞ.png" alt="Zeynep YAŞ">
+      </div>
+      <h3>Zeynep YAŞ</h3>
+      <span>İçerik Editörü</span>
+    </div>
+
+    <div class="team-member">
+      <div class="circle bg12">
+        <img src="ban_kişiler/Şener ÖZMEN.png" alt="Şener ÖZMEN">
+      </div>
+      <h3>Şener ÖZMEN</h3>
+      <span>İçerik Editörü</span>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Genel grid ve başlık */
+  .podcast-section {
+    padding: 60px 20px;
+    background: #fdfdfd;
+    text-align: center;
+  }
+
+  .podcast-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+  }
+
+  /* Grid ayarı */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 576px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Kişi kartı */
+  .team-member {
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .team-member:hover {
+    transform: translateY(-10px);
+  }
+
+  /* Çember ve fotoğraf */
+  .circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .team-member:hover .circle {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  /* Canlı sıcak renkler */
+  .bg1 { background: #FF6B6B; }   /* kırmızımsı */
+  .bg2 { background: #FF9F43; }   /* turuncu */
+  .bg3 { background: #FFD93D; }   /* sarı */
+  .bg4 { background: #6BCB77; }   /* yeşil */
+  .bg5 { background: #4D96FF; }   /* mavi */
+  .bg6 { background: #9B5DE5; }   /* mor */
+  .bg7 { background: #F15BB5; }   /* pembe */
+  .bg8 { background: #FF7B00; }   /* turuncu parlak */
+  .bg9 { background: #00C2C7; }   /* turkuaz */
+  .bg10 { background: #FF3C38; }  /* kırmızı parlak */
+  .bg11 { background: #FFE156; }  /* sarı parlak */
+  .bg12 { background: #6A4C93; }  /* mor koyu */
+
+  /* İsim ve unvan */
+  .team-member h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    color: #222;
+  }
+
+  .team-member span {
+    color: #555;
+    font-size: 0.95rem;
+  }
+</style>
+
+<section class="podcast-section">
+  <div class="about-simple-container">
+    <h2>Hakkımızda</h2>
+
+    <p>
+  
+Ban Bilim Kültür ve Sanat Vakfı, 20 kişiden ulaşan kurucuların bir araya gelmesiyle 31.12.2022 tarihinde İstanbul’da kuruldu.  Sivil toplum alanında yaşanan sorunlar ve çözümleri konusunda benzer düşünen kurucular, kendi alanlarında sivil toplumun gelişmesine katkı sunacak, bilgi birikim ve donanımlarını ortaya koyarak yeni bir vizyon ile yola çıkıp bir vakıf kurma konusunda mutabakata vardılar.
+2022 Ocak ayında kendi aramızda kurulacak vakfın amaç ve misyonunu, faaliyet alanlarını tartıştığımız bir düzine toplantı gerçekleştirdik. Kurucuların ortak bir dile sahip olmaları ve ortak yaklaşım taşımaları önemliydi. Bu toplantılarda netleşme sağlandıktan sonra Aralık 2022’de resmen başvuruda bulunduk yasal olarak kuruluşumuzu tamamladık. 
+Kuruluş nedenimizi kısaca özetlersek; 
+Türkiye’de özellikle son on yılda sivil toplum alanı gittikçe daralmıştır.  Demokrasi ve insan hakları alanında çalışma yürütenlerin işini zorlaştıran, gücünü azaltan dışsal ve içsel pek çok neden bulunmaktadır. Sivil toplum kuruluşları, çalışmalarını topluma ulaştırmada çeşitli zorluklar yaşamaktadır. Bu zorluklar bazen Türkiye’deki devlet aygıtlarının açık ve gizli baskısından kaynaklı olmakta bazen de bizzat sivil toplum örgütlerinin aşamadığı kendi örgütsel yapılarındaki problemlerden kaynaklanmaktadır. 
+Türkiye’de sivil toplum örgütlerinin tarihçesi çok eskiye dayanmamaktadır. Vakfımızın çalışmalarına esas aldığı Kürt sivil alanındaki organizasyonların tarihi ise çok daha yenidir. 
+Kürtlerin içinde bulunduğu kamusal alan çok dağınık ve pek çok yapısal sorunları barındırmaktadır. Kürt çalışmalarını ele alan sivil toplum örgütleri var olma ve yok olma arasında ince bir çizgide duruyorlar.  Devletin otoriter yapısı ve Kürtlerin hala ulus, halk, azınlık vb. hiçbir hak kategorisinden yararlanmamasının sonucu olarak Kürtlerin kurduğu sivil toplum örgütleri hiçbir devlet desteği alamamaktadır.  Buna bir de bizzat sivil toplum örgütlerinin kendi içinde taşıdığı kurumsallaşma ve kolektivizmden uzak olma, kimi zaman erkek egemen yönetim biçiminin baskın gelmesi gibi unsurlar eklenebilir. Pek çok sivil toplum örgütünün bizzat kendisi çalışanlara, kadınlara ve LGBT+ bireylere haksızlık ve ayrımcılık içeren davranışlardan arınmış değildir. 
+Tüm bunlara rağmen özellikle etkisi sınırlı olmakla beraber, son yirmi yılda başarılı sivil toplum çalışmaları örnekleri de umut vericidir. Kürt çalışmalarını merkeze alan sivil toplum çalışmaları Kürt kamusal alanına kalıcı olarak etkide bulunabilecek niteliğe ise henüz kavuşamadı. 
+Vakıf kurucularının tümü hem sivil alan tanımında hem de sivil toplum örgütlerinin yaşadıkları içsel ve dışsal sorunlar konusunda benzer yaklaşıma sahip insanlardır. Kurucular yeni bir vakıf ile, daha vizyoner, tamamen şeffaf, demokratik işleyişe sahip ve iş üreten bir sivil toplum örgütü olma iddiasındadırlar. Kurucular, sivil alan deneyimlerinden yola çıkarak daha ileri bir vizyona sahip bir sivil toplum örgütü hayata geçirilebilir mi sorusu etrafında bir araya geldiler. Tartışmaların devamında “Kürt kamusal alanına sivil toplum örgütleri üzerinden yapıcı müdahaleler ile üretim yaparak katkıda bulunulabilir mi?” sorusuna da cevap arandı.  Bu tartışmalar çok heyecan verici ve çok geliştiriciydi. Önce mevcut durumun analizi yapıldı, hem dışarıdan hem de içeriden iyi bir sivil toplum örgütü önündeki engellerin neler olduğu masaya yatırıldı. Türkiye’de sivil toplum alanında çalışan kişi ve kurumların önündeki en büyük engelin devletin anti demokratik yapısı olduğu açıktı. İktidar, kendi ideolojisini paylaşmayan kişi ve kurumları, ötekileştirmekte ve kriminalize etmektedir.  Böylece sivil alanın etki gücünü kırıp dar bir alana hapsetmektedir.  Masaya yatırılan bir diğer konu da sivil yapıların iç sorunları idi. Kollektif hareket etme kültürünün az olması, demokrasi kültürünün bizzat sivil toplum örgütlerinde yerleşmemesi, yönetim kurullarının, sivil toplum idarecilerinin yıllarca değişmemesi, zaman içerisinde kendini tekrar etmesi, kalıcı işler yapılmaması, ekonomik sorunlar, iş birliklerinin geliştirilememesi, ağlar oluşturulamaması, bir süre sonra sivil toplum örgütünün başlangıçtaki amaçlarından tamamen farklı noktalara savrulmasına neden oluyor. 
+BAN Vakfı kurucuları yukarıdaki tespitlerde ve çözüm yollarında hemfikir olarak yola çıktılar. Vakfın kurucularının her biri daha önce çalıştıkları kurumları ileri taşımış, değer katmış, kolektif ve demokratik bir işleyişe dair fikri ve pratiği olan kişilerdir. Ayrıca tamamen sivil alan inşa etme süreçlerine dair değerli bilgi birikimine sahiplerdir. Kurucuların BAN Vakfı öncesi çalışmalarda birbirleri ile kesiştiği yollar bugün BAN Vakfına giden taşları döşemiştir. 
+Türkiye’nin saygın ve önemli sivil toplum örgütlerinden, Kürt çalışmaları alanından, kadın ve çocuklara dair çalışmalar yapan, hafıza çalışmaları, çağdaş sanat, müzik, tiyatro vb alanlarda örgütlü ya da bireysel üretim yapan kurucularımız bulunmaktadır. 20 kişilik kurucu ekibimizden 12’si kadın olup, sanatçı, yazar, şair, çevirmen, doktora öğrencisi, avukat, eczacı, finansçı, sosyolog, tiyatro yönetmeni gibi farklı alan ve disiplinden gelen insanlardır.
+
+    </p>
+  </div>
+</section>
+
+<section class="podcast-section" id="contact">
+  <div class="contact-container">
+    <h2>İletişim</h2>
+    <p class="contact-desc">
+      Görüş, öneri ve iş birlikleri için bizimle iletişime geçebilirsiniz.
+    </p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Ad Soyad" required>
+      <input type="email" placeholder="E-posta Adresi" required>
+      <textarea placeholder="Mesajınız" rows="5" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer" style="background-color: aliceblue;">
+  <div class="footer-container" >
+
+    <!-- LOGO & KISA AÇIKLAMA -->
+    <div class="footer-col footer-about">
+      <h3 style="color: black;">BAN Vakfı</h3>
+      <p>
+        Bilgi üretimini, kültürel çeşitliliği ve
+        nitelikli dijital yayıncılığı destekleyen
+        bağımsız bir blog & podcast platformu.
+      </p>
+    </div>
+
+    <!-- HIZLI MENÜ -->
+    <div class="footer-col">
+      <h4 style="color: black;">Hızlı Menü</h4>
+      <ul>
+        <li ><a href="#home" style="color: black;">Ana Sayfa</a></li>
+        <li><a href="#blog" style="color: black;">Blog</a></li>
+        <li><a href="#podcast"style="color: black;">Podcast</a></li>
+        <li><a href="#team" style="color: black;">Ekibimiz</a></li>
+        <li><a href="#about" style="color: black;">Hakkımızda</a></li>
+        <li><a href="#contact" style="color: black;">İletişim</a></li>
+      </ul>
+    </div>
+
+    <!-- YAYINLAR -->
+    <div class="footer-col">
+      <h4 style="color: black;">Yayınlarımız</h4>
+      <ul>
+        <li style="color: black;">Blog Yazıları</li>
+        <li style="color: black;">Podcast Bölümleri</li>
+        <li style="color: black;">Özel Dosyalar</li>
+        <li style="color: black;">Arşiv</li>
+      </ul>
+    </div>
+
+    <!-- SOSYAL MEDYA -->
+    <div class="footer-col">
+      <h4 style="color: black;" >Bizi Takip Edin</h4>
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://x.com" target="_blank" aria-label="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+ 
+
+
+
+  </div>
+
+  <!-- ALT BAR -->
+  <div class="footer-bottom">
+    <p>© 2026 BAN Vakfı • Tüm Hakları Saklıdır</p>
+  </div>
+</footer>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<script src="script.js"></script>
 </body>
 </html>
