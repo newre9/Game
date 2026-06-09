@@ -1,19 +1,45 @@
-var t=Math.floor((Math.random()*100)+1);
-var count=0;
-console.log(t);
-function Kontrol(){
-    var i=Number(document.getElementById("in1").value);
-    if(t>i){
-        count++;
-        document.getElementById("cc").innerHTML=count;
-        document.getElementById("sonuc").innerHTML="Tahmin sayınızı büyütün";
-    }else if(t<i){
-        count++;
-        document.getElementById("cc").innerHTML=count;
-        document.getElementById("sonuc").innerHTML="Tahmin sayınızı Küçültün";
-    }else if(t==i){
-        count++;
-        document.getElementById("cc").innerHTML=count;
-        document.getElementById("sonuc").innerHTML="Tebrikler";
-    }
+// Burger Menü
+const burger = document.getElementById("burger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+burger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+});
+
+// Dil Değiştirme
+function changeLang(lang) {
+  // Şimdilik URL yönlendirme
+  window.location.href = "/" + lang;
+}
+
+
+const heroVideo = document.querySelector('.video-hero video');
+if (heroVideo) {
+  heroVideo.playbackRate = 0.7;
+}
+
+
+
+function openPodcast(img, title, desc, audio) {
+  document.getElementById("podcastModal").style.display = "flex";
+
+  document.getElementById("modalImage").src = img;
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalDesc").innerText = desc;
+
+  const audioSource = document.getElementById("modalAudioSource");
+  const audioPlayer = document.getElementById("modalAudio");
+
+  audioSource.src = audio;
+  audioPlayer.load();
+}
+
+document.getElementById("closeModal").onclick = function() {
+  document.getElementById("podcastModal").style.display = "none";
+}
+
+window.onclick = function(e) {
+  if (e.target === document.getElementById("podcastModal")) {
+    document.getElementById("podcastModal").style.display = "none";
+  }
 }
