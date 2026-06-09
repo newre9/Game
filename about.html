@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAN Vakfı</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+  <a href="index.html">
+    <img src="ban_logo_kurdi-01.png" alt="BAN Vakfı Logo" class="logo-img">
+  </a>
+</div>
+
+  <div class="nav-right">
+    <!-- DİL SEÇİMİ -->
+  <div class="languages">
+  <span onclick="changeLang('tr')" class="lang-item">TR</span>
+  <span onclick="changeLang('ku')" class="lang-item">KU</span>
+  <span onclick="changeLang('en')" class="lang-item">EN</span>
+  </div>
+
+    <!-- BURGER -->
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- MENÜ -->
+  <nav class="mobile-menu" id="mobileMenu">
+  <a href="#home"><i class="fa-solid fa-house"></i> Ana Sayfa</a>
+  <a href="#blog"><i class="fa-solid fa-pen-to-square"></i> Blog</a>
+  <a href="#podcast"><i class="fa-solid fa-microphone"></i> Podcast</a>
+  <a href="#members"><i class="fa-solid fa-users"></i> Üyeler</a>
+  <a href="#project"><i class="fa-solid fa-diagram-project"></i> Projeler</a>
+  <a href="#about"><i class="fa-solid fa-circle-info"></i> Hakkımızda</a>
+  <a href="#contact"><i class="fa-solid fa-envelope"></i> İletişim</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+<section class="video-hero" style="height:40vh;">
+  <div class="video-overlay"></div>
+  <div class="video-content">
+    <h1>Hakkımızda</h1>
+    <p>BAN Vakfı hakkında detaylı bilgi</p>
+  </div>
+</section>
+
+<!-- TAM METİN -->
+<section class="podcast-section">
+  <div class="about-simple-container" style="max-width:900px; margin:auto; text-align:left;">
+
+    <p>
+Ban Bilim Kültür ve Sanat Vakfı, 20 kişiden ulaşan kurucuların bir araya gelmesiyle 31.12.2022 tarihinde İstanbul’da kuruldu. Sivil toplum alanında yaşanan sorunlar ve çözümleri konusunda benzer düşünen kurucular, kendi alanlarında sivil toplumun gelişmesine katkı sunacak, bilgi birikim ve donanımlarını ortaya koyarak yeni bir vizyon ile yola çıkıp bir vakıf kurma konusunda mutabakata vardılar.
+
+2022 Ocak ayında kendi aramızda kurulacak vakfın amaç ve misyonunu, faaliyet alanlarını tartıştığımız bir düzine toplantı gerçekleştirdik. Kurucuların ortak bir dile sahip olmaları ve ortak yaklaşım taşımaları önemliydi. Bu toplantılarda netleşme sağlandıktan sonra Aralık 2022’de resmen başvuruda bulunduk ve yasal olarak kuruluşumuzu tamamladık.
+
+Kuruluş nedenimizi kısaca özetlersek; Türkiye’de özellikle son on yılda sivil toplum alanı gittikçe daralmıştır. Demokrasi ve insan hakları alanında çalışma yürütenlerin işini zorlaştıran pek çok neden bulunmaktadır.
+
+Sivil toplum kuruluşları, çalışmalarını topluma ulaştırmada çeşitli zorluklar yaşamaktadır. Bu zorluklar bazen devlet baskısından bazen de kurum içi yapısal problemlerden kaynaklanmaktadır.
+
+Türkiye’de sivil toplum örgütlerinin tarihçesi çok eskiye dayanmamaktadır. Kürt sivil alanındaki organizasyonların tarihi ise çok daha yenidir.
+
+Kürtlerin içinde bulunduğu kamusal alan çok dağınık ve yapısal sorunlar barındırmaktadır. Kurumlar çoğu zaman destek bulamamakta ve sürdürülebilirlik sorunu yaşamaktadır.
+
+Buna rağmen son yıllarda umut verici çalışmalar da yapılmıştır. Ancak bu çalışmaların kalıcı ve güçlü etki yaratması için daha sistemli ve vizyoner yapılara ihtiyaç vardır.
+
+BAN Vakfı kurucuları bu ihtiyaçtan yola çıkarak; şeffaf, demokratik, üretken ve sürdürülebilir bir sivil toplum yapısı oluşturmayı hedeflemiştir.
+
+Vakfın kurucuları; sanat, akademi, hukuk, finans, sağlık ve sosyal bilimler gibi farklı alanlardan gelen, deneyimli ve üretken bireylerden oluşmaktadır.
+
+20 kişilik kurucu ekibin 12’si kadın olup; sanatçı, yazar, şair, çevirmen, doktora öğrencisi, avukat, eczacı ve sosyolog gibi farklı disiplinlerden oluşmaktadır.
+    </p>
+
+  </div>
+</section>
+<section class="podcast-section" id="contact">
+  <div class="contact-container">
+    <h2>İletişim</h2>
+    <p class="contact-desc">
+      Görüş, öneri ve iş birlikleri için bizimle iletişime geçebilirsiniz.
+    </p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Ad Soyad" required>
+      <input type="email" placeholder="E-posta Adresi" required>
+      <textarea placeholder="Mesajınız" rows="5" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer" style="background-color: aliceblue;">
+  <div class="footer-container" >
+
+    <!-- LOGO & KISA AÇIKLAMA -->
+    <div class="footer-col footer-about">
+      <h3 style="color: black;">BAN Vakfı</h3>
+      <p>
+        Bilgi üretimini, kültürel çeşitliliği ve
+        nitelikli dijital yayıncılığı destekleyen
+        bağımsız bir blog & podcast platformu.
+      </p>
+    </div>
+
+    <!-- HIZLI MENÜ -->
+    <div class="footer-col">
+      <h4 style="color: black;">Hızlı Menü</h4>
+      <ul>
+        <li ><a href="#home" style="color: black;">Ana Sayfa</a></li>
+        <li><a href="#blog" style="color: black;">Blog</a></li>
+        <li><a href="#podcast"style="color: black;">Podcast</a></li>
+        <li><a href="#team" style="color: black;">Ekibimiz</a></li>
+        <li><a href="#about" style="color: black;">Hakkımızda</a></li>
+        <li><a href="#contact" style="color: black;">İletişim</a></li>
+      </ul>
+    </div>
+
+    <!-- YAYINLAR -->
+    <div class="footer-col">
+      <h4 style="color: black;">Yayınlarımız</h4>
+      <ul>
+        <li style="color: black;">Blog Yazıları</li>
+        <li style="color: black;">Podcast Bölümleri</li>
+        <li style="color: black;">Özel Dosyalar</li>
+        <li style="color: black;">Arşiv</li>
+      </ul>
+    </div>
+
+    <!-- SOSYAL MEDYA -->
+    <div class="footer-col">
+      <h4 style="color: black;" >Bizi Takip Edin</h4>
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://x.com" target="_blank" aria-label="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+ 
+
+
+
+  </div>
+
+  <!-- ALT BAR -->
+  <div class="footer-bottom">
+    <p>© 2026 BAN Vakfı • Tüm Hakları Saklıdır</p>
+  </div>
+</footer>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<script src="script.js"></script>
+</body>
+</html>

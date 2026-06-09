@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAN Vakfı</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    .header {
+      background-color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+    .header img.logo-img {
+      height: 50px;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .podcast-detail {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .podcast-image {
+      flex: 1 1 300px;
+    }
+    .podcast-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .podcast-info {
+      flex: 2 1 400px;
+    }
+    .podcast-info h1 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+    .podcast-info p.author {
+      font-weight: bold;
+      margin: 5px 0 20px 0;
+      color: #555;
+    }
+    .podcast-info p.description {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .podcast-info .links a {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #1db954;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .podcast-info .links a.youtube {
+      background-color: #ff0000;
+    }
+    audio {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .related-section {
+      margin-top: 50px;
+    }
+    .related-section h2 {
+      margin-bottom: 20px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .related-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .related-card h4 {
+      margin: 5px 0 0 0;
+      font-size: 1rem;
+    }
+    .related-card p {
+      font-size: 0.85rem;
+      color: #555;
+    }
+    .related-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .podcast-info p.description {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333; /* yazının görünmesi için kontrast */
+  position: relative;
+  z-index: 2;
+}
+.links a {
+  display: inline-flex; /* ikon + yazı yan yana */
+  align-items: center;
+  gap: 8px; /* ikon ile yazı arası boşluk */
+  margin-right: 15px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #1db954; /* Spotify için */
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.links a.youtube {
+  background-color: #ff0000; /* YouTube rengi */
+}
+
+.links a:hover {
+  transform: translateY(-3px);
+}
+  </style>
+      
+
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+  <a href="index.html">
+    <img src="ban_logo_kurdi-01.png" alt="BAN Vakfı Logo" class="logo-img">
+  </a>
+</div>
+
+  <div class="nav-right">
+    <!-- DİL SEÇİMİ -->
+  <div class="languages">
+  <span onclick="changeLang('tr')" class="lang-item">TR</span>
+  <span onclick="changeLang('ku')" class="lang-item">KU</span>
+  <span onclick="changeLang('en')" class="lang-item">EN</span>
+  </div>
+
+    <!-- BURGER -->
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- MENÜ -->
+  <nav class="mobile-menu" id="mobileMenu">
+  <a href="index.html"><i class="fa-solid fa-house"></i> Ana Sayfa</a>
+  <a href="#blog"><i class="fa-solid fa-pen-to-square"></i> Blog</a>
+  <a href="#podcast"><i class="fa-solid fa-microphone"></i> Podcast</a>
+  <a href="#members"><i class="fa-solid fa-users"></i> Üyeler</a>
+  <a href="#project"><i class="fa-solid fa-diagram-project"></i> Projeler</a>
+  <a href="#about"><i class="fa-solid fa-circle-info"></i> Hakkımızda</a>
+  <a href="#contact"><i class="fa-solid fa-envelope"></i> İletişim</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+<!-- HERO -->
+<section class="video-hero">
+   <video autoplay muted loop playsinline>
+    <source src="head.mp4" type="video/mp4">
+    Tarayıcınız video etiketini desteklemiyor.
+  </video>
+
+  <!-- Gölge -->
+  <div class="video-overlay"></div>
+
+  <!-- İçerik -->
+  <div class="video-content">
+    <h1>Bilgi • Dayanışma • Gelecek</h1>
+    <p>BAN Vakfı Blog & Podcast Platformu</p>
+  </div>
+</section>
+
+<!-- TAM METİN -->
+<div class="container">
+  <div class="podcast-detail">
+    <!-- Podcast Image -->
+    <div class="podcast-image">
+      <img src="podcast_design/1/1.jpg" alt="Podcast Bölüm 2">
+    </div>
+
+    <!-- Podcast Info -->
+  <!-- Podcast Info -->
+<div class="podcast-info" style="position: relative; z-index: 2; color: #333;">
+  <h1>HESENÊ DEWRÊŞ</h1>
+  
+
+  <p class="description">
+    Bu bölümde HESENÊ DEWRÊŞ ile Kürt kültürü, müzik ve tarih üzerine derin bir sohbet gerçekleştiriyoruz.
+    Dinleyicilerimize zengin bir içerik sunmayı hedefliyoruz. 
+    Her bölümde farklı konuklar ve farklı bakış açıları ile kültürel bir yolculuğa çıkıyoruz.
+  </p>
+
+  <p class="description">
+     Bölüm boyunca tarihi olaylara, müzik kültürüne ve geleneksel öykülere değiniliyor.
+    Konuk, kendi deneyimlerini ve perspektiflerini paylaşıyor. Podcast, hem eğitici hem de keyifli bir sohbet sunuyor.
+  </p>
+
+  <audio controls>
+    <source src="podcast_ses/episode1.m4a" type="audio/mpeg">
+    Tarayıcınız audio elementini desteklemiyor.
+  </audio>
+
+ <div class="links">
+  <a href="https://open.spotify.com/" target="_blank">
+    <i class="fa-brands fa-spotify"></i> Spotify
+  </a>
+  <a href="https://www.youtube.com/" target="_blank" class="youtube">
+    <i class="fa-brands fa-youtube"></i> YouTube
+  </a>
+</div>
+</div>
+  </div>
+
+  <!-- Related Podcasts -->
+
+</div>
+<footer class="site-footer" style="background-color: aliceblue;">
+  <div class="footer-container" >
+
+    <!-- LOGO & KISA AÇIKLAMA -->
+    <div class="footer-col footer-about">
+      <h3 style="color: black;">BAN Vakfı</h3>
+      <p>
+        Bilgi üretimini, kültürel çeşitliliği ve
+        nitelikli dijital yayıncılığı destekleyen
+        bağımsız bir blog & podcast platformu.
+      </p>
+    </div>
+
+    <!-- HIZLI MENÜ -->
+    <div class="footer-col">
+      <h4 style="color: black;">Hızlı Menü</h4>
+      <ul>
+        <li ><a href="#home" style="color: black;">Ana Sayfa</a></li>
+        <li><a href="#blog" style="color: black;">Blog</a></li>
+        <li><a href="#podcast"style="color: black;">Podcast</a></li>
+        <li><a href="#team" style="color: black;">Ekibimiz</a></li>
+        <li><a href="#about" style="color: black;">Hakkımızda</a></li>
+        <li><a href="#contact" style="color: black;">İletişim</a></li>
+      </ul>
+    </div>
+
+    <!-- YAYINLAR -->
+    <div class="footer-col">
+      <h4 style="color: black;">Yayınlarımız</h4>
+      <ul>
+        <li style="color: black;">Blog Yazıları</li>
+        <li style="color: black;">Podcast Bölümleri</li>
+        <li style="color: black;">Özel Dosyalar</li>
+        <li style="color: black;">Arşiv</li>
+      </ul>
+    </div>
+
+    <!-- SOSYAL MEDYA -->
+    <div class="footer-col">
+      <h4 style="color: black;" >Bizi Takip Edin</h4>
+      <div class="footer-socials">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://x.com" target="_blank" aria-label="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+ 
+
+
+
+  </div>
+
+  <!-- ALT BAR -->
+  <div class="footer-bottom">
+    <p>© 2026 BAN Vakfı • Tüm Hakları Saklıdır</p>
+  </div>
+</footer>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<script src="script.js"></script>
+</body>
+</html>
