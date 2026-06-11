@@ -10,6 +10,73 @@
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+      <style>
+      .about-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:40px;
+}
+
+.about-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.about-card:hover{
+    transform:translateY(-10px);
+}
+
+.about-icon{
+    width:80px;
+    height:80px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:#bf1e2e;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+}
+
+.about-card h3{
+    margin-bottom:15px;
+    color:#222;
+}
+
+.about-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.about-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#bf1e2e;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+    font-weight:500;
+}
+
+.about-btn:hover{
+    background:#bf1e2e;
+    transform:translateY(-2px);
+}
+      </style>
+
 </head>
 
 <body>
@@ -22,12 +89,12 @@
 </div>
 
   <div class="nav-right">
-    <!-- DİL SEÇİMİ -->
+    <!-- DİL SEÇİMİ 
   <div class="languages">
   <span onclick="changeLang('tr')" class="lang-item">TR</span>
   <span onclick="changeLang('ku')" class="lang-item">KU</span>
   <span onclick="changeLang('en')" class="lang-item">EN</span>
-  </div>
+  </div>-->
 
     <!-- BURGER -->
     <div class="burger" id="burger">
@@ -39,12 +106,12 @@
 
   <!-- MENÜ -->
   <nav class="mobile-menu" id="mobileMenu">
-  <a href="index.html"><i class="fa-solid fa-house"></i> Ana Sayfa</a>
-  <a href="#blog"><i class="fa-solid fa-pen-to-square"></i> Blog</a>
-  <a href="#podcast"><i class="fa-solid fa-microphone"></i> Podcast</a>
-  <a href="#team"><i class="fa-solid fa-users"></i> Üyeler</a>
+  <a href="index.html"><i class="fa-solid fa-house"></i> BAN</a>
+  <a href="#blog"><i class="fa-solid fa-circle-info"></i> Hakkımızda</a>
+  <a href="#podcast"><i class="  fa-solid fa-users"></i> Ekibimiz</a>
+  <a href="#team"><i class="fa-solid fa-microphone"></i> Podcast</a>
   <a href="#project"><i class="fa-solid fa-diagram-project"></i> Projeler</a>
-  <a href="about.html"><i class="fa-solid fa-circle-info"></i> Hakkımızda</a>
+  <a href="about.html"><i class="  fa-solid fa-pen-to-square"></i> Blog</a>
   
   <a href="#contact"><i class="fa-solid fa-envelope"></i> İletişim</a>
 </nav>
@@ -67,107 +134,43 @@
     <p>BAN Vakfı Blog & Podcast Platformu</p>
   </div>
 </section>
+<section class="podcast-section" id="about">
+  <h2>Hakkımızda</h2>
 
-<section id="podcast" class="podcast-section">
-    <h2>🎙️ Podcastlerimiz</h2>
+  <div class="about-grid">
 
-    <div class="podcast-grid">
+   <div class="about-card">
+  <div class="about-icon">
+    <i class="fa-solid fa-bullseye"></i>
+  </div>
+  <h3>Misyonumuz</h3>
+  <p>
+    Bilgi üretimini desteklemek ve toplumsal dayanışmayı güçlendirmek...
+  </p>
+  <a href="misyon.html" class="about-btn">Devamını Oku</a>
+</div>
 
-         <div class="podcast-card">
-          <a href="podcast_detail.html">
-            <img src="podcast_design/1/1.jpg" alt="Podcast">
-            </a>
-            <h3>Bölüm 2</h3>
-            <p>HESENÊ DEWRÊŞ</p>
-            <audio controls>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        
+    <div class="about-card">
+  <div class="about-icon">
+    <i class="fa-solid fa-eye"></i>
+  </div>
+  <h3>Vizyonumuz</h3>
+  <p>
+    Demokratik ve katılımcı bir anlayışla geleceğe yön vermek...
+  </p>
+  <a href="vizyon.html" class="about-btn">Devamını Oku</a>
+</div>
 
-        <div class="podcast-card">
-            <img src="podcast_design/2.BÖLÜM/2.BÖLÜM-01.jpg" alt="Podcast">
-            <h3>Bölüm 2</h3>
-            <p>HESENÊ DEWRÊŞ</p>
-            <audio controls>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <div class="podcast-card">
-            <img src="podcast_design/3.BÖLÜM/3.BÖLÜM.jpg" alt="Podcast">
-            <h3>Bölüm 3</h3>
-            <p>HESENÊ DEWRÊŞ</p>
-            <audio controls>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-
-        <div class="podcast-card">
-            <img src="podcast_design/4. BÖLÜM/4.BÖLÜM-1.jpg" alt="Podcast">
-            <h3>Bölüm 4</h3>
-            <p>HESENÊ DEWRÊŞ</p>
-            <audio controls>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-          <div class="podcast-card">
-            <img src="podcast_design/5.BÖLÜM/5.BÖLÜM-01.jpg" alt="Podcast">
-            <h3>Bölüm 4</h3>
-            <p>HESENÊ DEWRÊŞ</p>
-            <audio controls>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
-            </audio>
-        </div>
- <div class="podcast-card">
-            <img src="podcast_design/6.BÖLÜM/6-BÖLÜM-01.jpg" alt="Podcast">
-            <h3>Bölüm 4</h3>
-            <p>HESENÊ DEWRÊŞ</p>
-            <audio controls>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-    </div>
-  
-   
-   
-</section>
-
-<!-- PODCAST MODAL -->
-
-
-
-<section id="blog" class="podcast-section">
-  <h2>📰 Blog Yazıları</h2>
-
-  <div class="blog-grid">
-
-    <article class="blog-card">
-      <div class="blog-image bg1">✍️</div>
-      <div class="blog-content">
-        <h3>Dayanışmanın Gücü</h3>
-        <p>Toplumsal birlikteliğin birey ve toplum üzerindeki etkileri.</p>
-        <a href="#">Devamını Oku →</a>
-      </div>
-    </article>
-
-    <article class="blog-card">
-      <div class="blog-image bg2">🌱</div>
-      <div class="blog-content">
-        <h3>Gönüllülük Nedir?</h3>
-        <p>Gönüllü çalışmanın bireysel ve sosyal kazanımları.</p>
-        <a href="#">Devamını Oku →</a>
-      </div>
-    </article>
-
-    <article class="blog-card">
-      <div class="blog-image bg3">📚</div>
-      <div class="blog-content">
-        <h3>Eğitim ve Gelecek</h3>
-        <p>Eğitim projelerinin toplum üzerindeki uzun vadeli etkileri.</p>
-        <a href="#">Devamını Oku →</a>
-      </div>
-    </article>
+<div class="about-card">
+  <div class="about-icon">
+    <i class="fa-solid fa-scale-balanced"></i>
+  </div>
+  <h3>Politikamız</h3>
+  <p>
+    Eşitlik, insan hakları ve şeffaflık ilkeleri doğrultusunda...
+  </p>
+  <a href="politika.html" class="about-btn">Devamını Oku</a>
+</div>
 
   </div>
 </section>
@@ -276,6 +279,130 @@
   </div>
 </section>
 
+<section id="podcast" class="podcast-section">
+    <h2>🎙️ Podcastlerimiz</h2>
+
+    <div class="podcast-grid">
+
+         <div class="podcast-card">
+          <a href="podcast_detail.html">
+            <img src="podcast_design/1/1.jpg" alt="Podcast">
+            </a>
+            <h3>Bölüm 2</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        
+
+        <div class="podcast-card">
+            <img src="podcast_design/2.BÖLÜM/2.BÖLÜM-01.jpg" alt="Podcast">
+            <h3>Bölüm 2</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="podcast-card">
+            <img src="podcast_design/3.BÖLÜM/3.BÖLÜM.jpg" alt="Podcast">
+            <h3>Bölüm 3</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="podcast-card">
+            <img src="podcast_design/4. BÖLÜM/4.BÖLÜM-1.jpg" alt="Podcast">
+            <h3>Bölüm 4</h3>
+            <p>HESENÊ DEWRÊŞ</p>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+          
+ 
+  
+   
+   
+</section>
+
+<section id="blog" class="podcast-section">
+  <h2>📰 Projelerimiz</h2>
+
+  <div class="blog-grid">
+
+    <article class="blog-card">
+      <div class="blog-image bg1">✍️</div>
+      <div class="blog-content">
+        <h3>Dayanışmanın Gücü</h3>
+        <p>Toplumsal birlikteliğin birey ve toplum üzerindeki etkileri.</p>
+        <a href="#">Devamını Oku →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-image bg2">🌱</div>
+      <div class="blog-content">
+        <h3>Gönüllülük Nedir?</h3>
+        <p>Gönüllü çalışmanın bireysel ve sosyal kazanımları.</p>
+        <a href="#">Devamını Oku →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-image bg3">📚</div>
+      <div class="blog-content">
+        <h3>Eğitim ve Gelecek</h3>
+        <p>Eğitim projelerinin toplum üzerindeki uzun vadeli etkileri.</p>
+        <a href="#">Devamını Oku →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
+<section id="blog" class="podcast-section">
+  <h2>📰 Blog Yazıları</h2>
+
+  <div class="blog-grid">
+
+    <article class="blog-card">
+      <div class="blog-image bg1">✍️</div>
+      <div class="blog-content">
+        <h3>Dayanışmanın Gücü</h3>
+        <p>Toplumsal birlikteliğin birey ve toplum üzerindeki etkileri.</p>
+        <a href="#">Devamını Oku →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-image bg2">🌱</div>
+      <div class="blog-content">
+        <h3>Gönüllülük Nedir?</h3>
+        <p>Gönüllü çalışmanın bireysel ve sosyal kazanımları.</p>
+        <a href="#">Devamını Oku →</a>
+      </div>
+    </article>
+
+    <article class="blog-card">
+      <div class="blog-image bg3">📚</div>
+      <div class="blog-content">
+        <h3>Eğitim ve Gelecek</h3>
+        <p>Eğitim projelerinin toplum üzerindeki uzun vadeli etkileri.</p>
+        <a href="#">Devamını Oku →</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
 <style>
   /* Genel grid ve başlık */
   .podcast-section {
@@ -371,26 +498,7 @@
   }
 </style>
 
-<section class="podcast-section">
-  <div class="about-simple-container">
-    <h2>Hakkımızda</h2>
 
-    <p>
-  
-Ban Bilim Kültür ve Sanat Vakfı, 20 kişiden ulaşan kurucuların bir araya gelmesiyle 31.12.2022 tarihinde İstanbul’da kuruldu.  Sivil toplum alanında yaşanan sorunlar ve çözümleri konusunda benzer düşünen kurucular, kendi alanlarında sivil toplumun gelişmesine katkı sunacak, bilgi birikim ve donanımlarını ortaya koyarak yeni bir vizyon ile yola çıkıp bir vakıf kurma konusunda mutabakata vardılar.
-2022 Ocak ayında kendi aramızda kurulacak vakfın amaç ve misyonunu, faaliyet alanlarını tartıştığımız bir düzine toplantı gerçekleştirdik. Kurucuların ortak bir dile sahip olmaları ve ortak yaklaşım taşımaları önemliydi. Bu toplantılarda netleşme sağlandıktan sonra Aralık 2022’de resmen başvuruda bulunduk yasal olarak kuruluşumuzu tamamladık. 
-Kuruluş nedenimizi kısaca özetlersek; 
-Türkiye’de özellikle son on yılda sivil toplum alanı gittikçe daralmıştır.  Demokrasi ve insan hakları alanında çalışma yürütenlerin işini zorlaştıran, gücünü azaltan dışsal ve içsel pek çok neden bulunmaktadır. Sivil toplum kuruluşları, çalışmalarını topluma ulaştırmada çeşitli zorluklar yaşamaktadır. Bu zorluklar bazen Türkiye’deki devlet aygıtlarının açık ve gizli baskısından kaynaklı olmakta bazen de bizzat sivil toplum örgütlerinin aşamadığı kendi örgütsel yapılarındaki problemlerden kaynaklanmaktadır. 
-Türkiye’de sivil toplum örgütlerinin tarihçesi çok eskiye dayanmamaktadır. Vakfımızın çalışmalarına esas aldığı Kürt sivil alanındaki organizasyonların tarihi ise çok daha yenidir. 
-Kürtlerin içinde bulunduğu kamusal alan çok dağınık ve pek çok yapısal sorunları barındırmaktadır. Kürt çalışmalarını ele alan sivil toplum örgütleri var olma ve yok olma arasında ince bir çizgide duruyorlar.  Devletin otoriter yapısı ve Kürtlerin hala ulus, halk, azınlık vb. hiçbir hak kategorisinden yararlanmamasının sonucu olarak Kürtlerin kurduğu sivil toplum örgütleri hiçbir devlet desteği alamamaktadır.  Buna bir de bizzat sivil toplum örgütlerinin kendi içinde taşıdığı kurumsallaşma ve kolektivizmden uzak olma, kimi zaman erkek egemen yönetim biçiminin baskın gelmesi gibi unsurlar eklenebilir. Pek çok sivil toplum örgütünün bizzat kendisi çalışanlara, kadınlara ve LGBT+ bireylere haksızlık ve ayrımcılık içeren davranışlardan arınmış değildir. 
-Tüm bunlara rağmen özellikle etkisi sınırlı olmakla beraber, son yirmi yılda başarılı sivil toplum çalışmaları örnekleri de umut vericidir. Kürt çalışmalarını merkeze alan sivil toplum çalışmaları Kürt kamusal alanına kalıcı olarak etkide bulunabilecek niteliğe ise henüz kavuşamadı. 
-Vakıf kurucularının tümü hem sivil alan tanımında hem de sivil toplum örgütlerinin yaşadıkları içsel ve dışsal sorunlar konusunda benzer yaklaşıma sahip insanlardır. Kurucular yeni bir vakıf ile, daha vizyoner, tamamen şeffaf, demokratik işleyişe sahip ve iş üreten bir sivil toplum örgütü olma iddiasındadırlar. Kurucular, sivil alan deneyimlerinden yola çıkarak daha ileri bir vizyona sahip bir sivil toplum örgütü hayata geçirilebilir mi sorusu etrafında bir araya geldiler. Tartışmaların devamında “Kürt kamusal alanına sivil toplum örgütleri üzerinden yapıcı müdahaleler ile üretim yaparak katkıda bulunulabilir mi?” sorusuna da cevap arandı.  Bu tartışmalar çok heyecan verici ve çok geliştiriciydi. Önce mevcut durumun analizi yapıldı, hem dışarıdan hem de içeriden iyi bir sivil toplum örgütü önündeki engellerin neler olduğu masaya yatırıldı. Türkiye’de sivil toplum alanında çalışan kişi ve kurumların önündeki en büyük engelin devletin anti demokratik yapısı olduğu açıktı. İktidar, kendi ideolojisini paylaşmayan kişi ve kurumları, ötekileştirmekte ve kriminalize etmektedir.  Böylece sivil alanın etki gücünü kırıp dar bir alana hapsetmektedir.  Masaya yatırılan bir diğer konu da sivil yapıların iç sorunları idi. Kollektif hareket etme kültürünün az olması, demokrasi kültürünün bizzat sivil toplum örgütlerinde yerleşmemesi, yönetim kurullarının, sivil toplum idarecilerinin yıllarca değişmemesi, zaman içerisinde kendini tekrar etmesi, kalıcı işler yapılmaması, ekonomik sorunlar, iş birliklerinin geliştirilememesi, ağlar oluşturulamaması, bir süre sonra sivil toplum örgütünün başlangıçtaki amaçlarından tamamen farklı noktalara savrulmasına neden oluyor. 
-BAN Vakfı kurucuları yukarıdaki tespitlerde ve çözüm yollarında hemfikir olarak yola çıktılar. Vakfın kurucularının her biri daha önce çalıştıkları kurumları ileri taşımış, değer katmış, kolektif ve demokratik bir işleyişe dair fikri ve pratiği olan kişilerdir. Ayrıca tamamen sivil alan inşa etme süreçlerine dair değerli bilgi birikimine sahiplerdir. Kurucuların BAN Vakfı öncesi çalışmalarda birbirleri ile kesiştiği yollar bugün BAN Vakfına giden taşları döşemiştir. 
-Türkiye’nin saygın ve önemli sivil toplum örgütlerinden, Kürt çalışmaları alanından, kadın ve çocuklara dair çalışmalar yapan, hafıza çalışmaları, çağdaş sanat, müzik, tiyatro vb alanlarda örgütlü ya da bireysel üretim yapan kurucularımız bulunmaktadır. 20 kişilik kurucu ekibimizden 12’si kadın olup, sanatçı, yazar, şair, çevirmen, doktora öğrencisi, avukat, eczacı, finansçı, sosyolog, tiyatro yönetmeni gibi farklı alan ve disiplinden gelen insanlardır.
-
-    </p>
-  </div>
-</section>
 
 <section class="podcast-section" id="contact">
   <div class="contact-container">
@@ -440,8 +548,7 @@ Türkiye’nin saygın ve önemli sivil toplum örgütlerinden, Kürt çalışma
       <ul>
         <li style="color: black;">Blog Yazıları</li>
         <li style="color: black;">Podcast Bölümleri</li>
-        <li style="color: black;">Özel Dosyalar</li>
-        <li style="color: black;">Arşiv</li>
+       
       </ul>
     </div>
 
