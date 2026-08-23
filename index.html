@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAN Vakfı</title>
+<link
+    rel="icon"
+    type="image/png"
+    href="logo/ban_logo_tr.png"
+>
+  <link rel="stylesheet" href="style.css" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                id="siteLogo"
+                src="logo/ban_logo_tr.png"
+                alt="BAN Vakfı Logo"
+                data-lang-alt="logo_alt"
+                class="logo-img"
+            >
+
+        </a>
+
+    </div>
+
+
+    <!-- SAĞ TARAF -->
+    <div class="nav-right">
+
+
+        <!-- DİL SEÇİMİ -->
+        <div class="language-selector">
+
+            <button
+                type="button"
+                class="language-button"
+                id="languageButton"
+                aria-label="Dil seçimi"
+                data-lang-aria="language_selection"
+            >
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span id="currentLanguage">
+                    TR
+                </span>
+
+                <i class="fa-solid fa-chevron-down language-arrow"></i>
+
+            </button>
+
+
+            <div
+                class="language-dropdown"
+                id="languageDropdown"
+            >
+
+
+                <!-- TÜRKÇE -->
+
+                <button
+                    type="button"
+                    class="language-option active"
+                    onclick="changeLang('tr')"
+                    data-language="tr"
+                >
+
+                    <span>
+                        TR
+                    </span>
+
+                    <small data-lang="language_turkish">
+                        Türkçe
+                    </small>
+
+                </button>
+
+
+                <!-- KÜRTÇE -->
+
+                <button
+                    type="button"
+                    class="language-option"
+                    onclick="changeLang('ku')"
+                    data-language="ku"
+                >
+
+                    <span>
+                        KU
+                    </span>
+
+                    <small data-lang="language_kurdish">
+                        Kurdî
+                    </small>
+
+                </button>
+
+
+                <!-- İNGİLİZCE -->
+
+                <button
+                    type="button"
+                    class="language-option"
+                    onclick="changeLang('en')"
+                    data-language="en"
+                >
+
+                    <span>
+                        EN
+                    </span>
+
+                    <small data-lang="language_english">
+                        English
+                    </small>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BURGER -->
+
+        <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menüyü aç"
+            data-lang-aria="menu_open"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- MENÜ -->
+
+    <nav
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+
+        <!-- MENÜ BAŞLIĞI -->
+
+        <div class="menu-header">
+
+            <span data-lang="menu_title">
+                Menü
+            </span>
+
+            <span class="menu-line"></span>
+
+        </div>
+
+
+
+        <!-- ANA SAYFA -->
+
+        <a
+            href="index.html"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-house"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_home"
+            >
+                BAN
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- HAKKIMIZDA -->
+
+        <a
+            href="#about"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_about"
+            >
+                Hakkımızda
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- PODCAST -->
+
+        <a
+            href="#podcast"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-microphone"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_podcast"
+            >
+                Podcast
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- PROJELER -->
+
+        <a
+            href="#project"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-diagram-project"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_projects"
+            >
+                Projeler
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- RAPORLAR -->
+
+        <a
+            href="rapor.html"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_reports"
+            >
+                Raporlar
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- İLETİŞİM -->
+
+        <a
+            href="#contact"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_contact"
+            >
+                İletişim
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- MENÜ FOOTER -->
+
+        <div class="menu-footer">
+
+            <span data-lang="site_name">
+                BAN Vakfı
+            </span>
+
+            <span data-lang="menu_copyright">
+                © 2026
+            </span>
+
+        </div>
+
+
+    </nav>
+
+</header>
+
+
+
+
+<section class="video-hero">
+
+    <div class="slider">
+        
+        <img src="slider_image/02.png" class="slide active">
+        <img src="slider_image/03.png" class="slide">
+        <img src="slider_image/04.png" class="slide">
+        <img src="slider_image/05.png" class="slide">
+        <img src="slider_image/06.png" class="slide">
+        <img src="slider_image/07.png" class="slide">
+        <img src="slider_image/08.png" class="slide">
+    </div>
+
+    <div class="video-overlay"></div>
+
+ 
+
+</section>
+
+
+
+
+<section class="about-section" id="about">
+
+    <h2 data-lang="about_title">
+        Hakkımızda
+    </h2>
+
+
+    <p
+        class="about-intro"
+        data-lang="about_intro"
+    >
+        BAN Vakfı'nın misyonu, vizyonu ve çalışma
+        ilkeleri hakkında bilgi edinin.
+    </p>
+
+
+    <div class="about-grid">
+
+
+        <!-- =====================================================
+             MİSYON
+             ===================================================== -->
+
+        <div class="about-card">
+
+            <div class="about-icon">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+
+            <h3 data-lang="mission_title">
+                Misyonumuz/Vizyonumuz
+            </h3>
+
+
+            <p data-lang="mission_text">
+                Bilgi üretimini desteklemek ve toplumsal
+                dayanışmayı güçlendirmek.
+            </p>
+
+
+            <a
+                href="hakkimizda.html#misyon"
+                class="about-btn"
+                data-lang="read_more"
+            >
+                Devamını Oku
+            </a>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             VİZYON
+             ===================================================== -->
+
+        <div class="about-card">
+
+            <div class="about-icon">
+                <i class="fa-solid fa-eye"></i>
+            </div>
+
+
+            <h3 data-lang="vision_title">
+                Hakkımızda
+            </h3>
+
+
+            <p data-lang="main_hakkimizda_text">
+                Demokratik, çoğulcu ve özgür bir gelecek
+                için bilgi üretmek.
+            </p>
+
+
+            <a
+                href="hakkimizda.html#vizyon"
+                class="about-btn"
+                data-lang="read_more"
+            >
+                Devamını Oku
+            </a>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             POLİTİKA
+             ===================================================== -->
+
+        <div class="about-card">
+
+            <div class="about-icon">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+
+
+            <h3 data-lang="policy_title">
+                Politika Belgelerimiz
+            </h3>
+
+
+            <p data-lang="policy_text">
+                Eşitlik, insan hakları, adalet ve
+                şeffaflık ilkeleri doğrultusunda çalışıyoruz.
+            </p>
+
+
+            <a
+                href="hakkimizda.html#politikalar"
+                class="about-btn"
+                data-lang="read_more"
+            >
+                Devamını Oku
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TÜM HAKKIMIZDA
+         ===================================================== -->
+
+    <div class="about-more">
+
+        <a
+            href="hakkimizda.html"
+            class="about-main-btn"
+        >
+
+            <span data-lang="about_all">
+                Hakkımızda Daha Fazla
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PODCAST ALANI
+     ===================================================== -->
+
+<section class="podcast-section" id="podcast">
+
+    <div class="podcast-container">
+
+
+        <!-- =====================================================
+             BAŞLIK
+             ===================================================== -->
+
+        <div class="podcast-heading">
+
+            <h2 data-lang="podcast_title">
+                Podcastlerimiz
+            </h2>
+
+            <p data-lang="podcast_description">
+                BAN Vakfı'nın podcast serilerini keşfedin.
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             PODCAST KARTLARI
+             ===================================================== -->
+
+        <div class="podcast-grid">
+
+
+            <!-- =================================================
+                 TAKDİM
+                 ================================================= -->
+
+            <a
+                href="podcast.html#takdim"
+                class="podcast-card"
+            >
+
+                <div class="podcast-image">
+
+                    <img
+                        src="podcast_anasayfa/takdimpodcast.jpeg"
+                        alt="BAN Vakfı Takdim Podcast"
+                        data-lang-alt="podcast_present_alt"
+                        loading="lazy"
+                    >
+
+
+                    <div class="podcast-overlay">
+
+                        <div class="podcast-play">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="podcast-content">
+
+                    <h3 data-lang="podcast_present">
+                        Takdim
+                    </h3>
+
+
+                    <span class="podcast-link">
+
+                        <span data-lang="podcast_view">
+                            Podcastleri Gör
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 1. SEZON
+                 ================================================= -->
+
+            <a
+                href="podcast.html#seri1"
+                class="podcast-card"
+            >
+
+                <div class="podcast-image">
+
+                    <img
+                        src="podcast_anasayfa/1seri.jpeg"
+                        alt="BAN Vakfı 1. Seri Podcast"
+                        data-lang-alt="podcast_season_1_alt"
+                        loading="lazy"
+                    >
+
+
+                    <div class="podcast-overlay">
+
+                        <div class="podcast-play">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="podcast-content">
+
+                    <h3 data-lang="podcast_season_1">
+                        1. Sezon
+                    </h3>
+
+
+                    <span class="podcast-link">
+
+                        <span data-lang="podcast_view">
+                            Podcastleri Gör
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 2. SEZON
+                 ================================================= -->
+
+            <a
+                href="podcast.html#seri2"
+                class="podcast-card"
+            >
+
+                <div class="podcast-image">
+
+                    <img
+                        src="podcast_anasayfa/2seri.jpeg"
+                        alt="BAN Vakfı 2. Seri Podcast"
+                        data-lang-alt="podcast_season_2_alt"
+                        loading="lazy"
+                    >
+
+
+                    <div class="podcast-overlay">
+
+                        <div class="podcast-play">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="podcast-content">
+
+                    <h3 data-lang="podcast_season_2">
+                        2. Sezon
+                    </h3>
+
+
+                    <span class="podcast-link">
+
+                        <span data-lang="podcast_view">
+                            Podcastleri Gör
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 PODCAST HABERLERİ
+                 ================================================= -->
+
+            <a
+                href="podcast.html#seri3"
+                class="podcast-card"
+            >
+
+                <div class="podcast-image">
+
+                    <img
+                        src="podcast_anasayfa/haber1.jpeg"
+                        alt="BAN Vakfı Podcast Haberleri"
+                        data-lang-alt="podcast_news_alt"
+                        loading="lazy"
+                    >
+
+
+                    <div class="podcast-overlay">
+
+                        <div class="podcast-play">
+
+                            <i class="fa-solid fa-play"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="podcast-content">
+
+                    <span class="podcast-number">
+                    </span>
+
+
+                    <h3 data-lang="podcast_news">
+                        Podcast Haberleri
+                    </h3>
+
+
+                    <span class="podcast-link">
+
+                        <span data-lang="podcast_news_view">
+                            Haberleri Gör
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             TÜM PODCASTLER
+             ===================================================== -->
+
+        <div class="podcast-more">
+
+            <a
+                href="podcast.html"
+                class="podcast-more-btn"
+            >
+
+                <span data-lang="all_podcasts">
+                    Tüm Podcastleri Gör
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="project-section" id="project">
+
+    <h2 data-lang="projects_title">
+        Projelerimiz
+    </h2>
+
+
+    <div class="blog-grid">
+
+
+        <!-- =====================================================
+             PROJE 1
+             ===================================================== -->
+
+        <article class="podcast-card">
+
+
+            <div class="podcast-image">
+
+                <img
+                    src="proje_image/1proje.jpeg"
+                    alt="Kürt Tarihinin Ana Kaynakları"
+                    data-lang-alt="project_1_alt"
+                >
+
+            </div>
+
+
+            <div class="blog-content">
+
+
+                <h3 data-lang="project_1_title">
+                    Kürt Tarihinin Ana Kaynakları
+                </h3>
+
+
+                <p data-lang="project_1_description">
+                    Kürt Tarihinin Ana Kaynakları
+                </p>
+
+
+                <a
+                    href="proje.html?id=1"
+                    data-lang="project_read_more"
+                >
+                    Devamını Oku →
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             PROJE 2
+             ===================================================== -->
+
+        <article class="podcast-card">
+
+
+            <div class="podcast-image">
+
+                <img
+                    src="proje_image/2proje.jpeg"
+                    alt="Sivil Toplum Örgütleri ve Aktörleri Arası Diyalog Çalıştayı"
+                    data-lang-alt="project_2_alt"
+                >
+
+            </div>
+
+
+            <div class="blog-content">
+
+
+                <h3 data-lang="project_2_title">
+                    Sivil Toplum Örgütleri ve Aktörleri Arası
+                    Diyalog Çalıştayı
+                </h3>
+
+
+                <p data-lang="project_2_description">
+                    Sivil Toplum Örgütleri ve Aktörleri Arası
+                    Diyalog Çalıştayı
+                </p>
+
+
+                <a
+                    href="proje.html?id=2"
+                    data-lang="project_read_more"
+                >
+                    Devamını Oku →
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================================================
+             PROJE 3
+             ===================================================== -->
+
+        <article class="podcast-card">
+
+
+            <div class="podcast-image">
+
+                <img
+                    src="proje_image/3proje.jpeg"
+                    alt="Bütüncül Kürt Tarihi Yazımı Çalıştayı"
+                    data-lang-alt="project_3_alt"
+                >
+
+            </div>
+
+
+            <div class="blog-content">
+
+
+                <h3 data-lang="project_3_title">
+                    Bütüncül Kürt Tarihi Yazımı Çalıştayı
+                </h3>
+
+
+                <p data-lang="project_3_description">
+                    Bütüncül Kürt Tarihi Yazımı Çalıştayı
+                </p>
+
+
+                <a
+                    href="proje.html?id=3"
+                    data-lang="project_read_more"
+                >
+                    Devamını Oku →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section class="contact-section" id="contact">
+
+    <div class="contact-container">
+
+
+        <!-- BAŞLIK -->
+
+        <h2 data-lang="contact_title">
+            İletişim
+        </h2>
+
+
+        <!-- AÇIKLAMA -->
+
+        <p
+            class="contact-desc"
+            data-lang="contact_description"
+        >
+            Görüş, öneri ve iş birlikleri için bizimle
+            iletişime geçebilirsiniz.
+        </p>
+
+
+        <!-- FORM -->
+
+        <form
+            class="contact-form"
+            id="contactForm"
+        >
+
+
+            <!-- AD SOYAD -->
+
+            <input
+                type="text"
+                id="nameInput"
+                name="name"
+                placeholder="Ad Soyad"
+                data-lang-placeholder="name_placeholder"
+                required
+            >
+
+
+            <!-- E-POSTA -->
+
+            <input
+                type="email"
+                id="emailInput"
+                name="email"
+                placeholder="E-posta Adresi"
+                data-lang-placeholder="email_placeholder"
+                required
+            >
+
+
+            <!-- MESAJ -->
+
+            <textarea
+                id="messageInput"
+                name="message"
+                placeholder="Mesajınız"
+                data-lang-placeholder="message_placeholder"
+                rows="5"
+                required
+            ></textarea>
+
+
+            <!-- GÖNDER -->
+
+            <button
+                type="submit"
+                id="submitButton"
+                data-lang="send_button"
+            >
+                Gönder
+            </button>
+
+
+            <!-- FORM DURUMU -->
+
+            <p
+                id="formStatus"
+                data-lang="form_status"
+            ></p>
+
+
+        </form>
+
+    </div>
+
+</section>
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+
+        <!-- =====================================================
+             1. KOLON : HAKKIMIZDA
+             ===================================================== -->
+
+        <div class="footer-col footer-about">
+
+            <h3 data-lang="footer_brand">
+                BAN Vakfı
+            </h3>
+
+            <p data-lang="footer_about_text">
+                Bilgi üretimini, kültürel çeşitliliği ve
+                nitelikli dijital yayıncılığı destekleyen
+                bağımsız bir blog & podcast platformu.
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             2. KOLON : HIZLI MENÜ
+             ===================================================== -->
+
+        <div class="footer-col">
+
+            <h4 data-lang="footer_menu_title">
+                Hızlı Menü
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="index.html"
+                        data-lang="footer_home"
+                    >
+                        Ana Sayfa
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="rapor.html"
+                        data-lang="footer_reports"
+                    >
+                        Raporlar
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="index.html#podcast"
+                        data-lang="footer_podcast"
+                    >
+                        Podcast
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="index.html#about"
+                        data-lang="footer_about"
+                    >
+                        Hakkımızda
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="index.html#contact"
+                        data-lang="footer_contact"
+                    >
+                        İletişim
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             3. KOLON : YAYINLAR
+             ===================================================== -->
+
+        <div class="footer-col">
+
+            <h4 data-lang="footer_publications_title">
+                Yayınlarımız
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="rapor.html"
+                        data-lang="footer_reports"
+                    >
+                        Raporlar
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="podcast.html"
+                        data-lang="footer_podcast_episodes"
+                    >
+                        Podcast Bölümleri
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             4. KOLON : YASAL + SOSYAL
+             ===================================================== -->
+
+        <div class="footer-col">
+
+
+            <!-- YASAL -->
+
+            <h4 data-lang="footer_legal_title">
+                Yasal Bilgilendirme
+            </h4>
+
+
+            <ul class="footer-legal">
+
+                <li>
+
+                    <a
+                        href="ban dosylar/tr/BAN KVKK.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-lang="footer_kvkk"
+                    >
+                        KVKK Aydınlatma Metni
+                    </a>
+
+                </li>
+
+
+
+            </ul>
+
+
+
+            <!-- SOSYAL MEDYA -->
+
+            <h4
+                class="footer-social-title"
+                data-lang="footer_social_title"
+            >
+                Bizi Takip Edin
+            </h4>
+
+
+            <div class="footer-socials">
+
+
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="https://www.instagram.com/weqfa_ban/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    data-lang-aria="social_instagram"
+                >
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+
+                <!-- X -->
+
+                <a
+                    href="https://x.com/banvakfi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X"
+                    data-lang-aria="social_x"
+                >
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+
+
+                <!-- SPOTIFY -->
+
+                <a
+                    href="https://open.spotify.com/show/7p68ISUEB62W9hC2dD6zTM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Spotify"
+                    data-lang-aria="social_spotify"
+                >
+
+                    <i class="fa-brands fa-spotify"></i>
+
+                </a>
+
+
+
+                <!-- YOUTUBE -->
+
+                <a
+                    href="https://www.youtube.com/@BanVakf%C4%B1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    data-lang-aria="social_youtube"
+                >
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+
+
+                <!-- APPLE PODCASTS -->
+
+                <a
+                    href="https://podcasts.apple.com/tr/podcast/bane%C5%9Fan/id1896906237?l=tr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Apple Podcasts"
+                    data-lang-aria="social_apple"
+                >
+
+                    <i class="fa-solid fa-podcast"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER ALT BAR
+         ===================================================== -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p data-lang="footer_copyright">
+                © 2026 BAN Vakfı. Tüm Hakları Saklıdır.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<script src="script.js"></script>
+<script src="tr.js"></script>
+<script src="ku.js"></script>
+<script src="en.js"></script>
+</body>
+</html>

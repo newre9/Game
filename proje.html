@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <link
+    rel="icon"
+    type="image/png"
+    href="logo/ban_logo_tr.png"
+>
+
+    <title>Proje | BAN Vakfı</title>
+
+    <meta
+        name="description"
+        id="metaDescription"
+        content="BAN Vakfı projeleri."
+    >
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- ANA CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <style>
+
+        /* =========================================================
+           PROJE DETAY SAYFASI
+           ========================================================= */
+
+        .project-detail-page {
+            background: #f8f9fb;
+
+            min-height: 100vh;
+
+            padding-top: 110px;
+            padding-bottom: 80px;
+        }
+
+
+        /* =========================================================
+           ANA CONTAINER
+           ========================================================= */
+
+        .project-detail-container {
+            max-width: 1150px;
+
+            margin: 0 auto;
+
+            padding: 0 25px;
+        }
+
+
+        /* =========================================================
+           ÜST ALAN
+           ========================================================= */
+
+        .project-detail-header {
+            text-align: center;
+
+            max-width: 850px;
+
+            margin: 0 auto 45px;
+        }
+
+
+     
+
+
+        .project-detail-header h1 {
+            margin: 0 0 18px;
+
+            font-size: 42px;
+
+            line-height: 1.25;
+
+            font-weight: 600;
+
+            color: #222;
+        }
+
+
+        .project-detail-intro {
+            margin: 0;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            color: #666;
+        }
+
+
+        /* =========================================================
+           ANA FOTOĞRAF
+           ========================================================= */
+
+        .project-detail-image {
+            width: 100%;
+
+            height: 500px;
+
+            overflow: hidden;
+
+            border-radius: 22px;
+
+            margin-bottom: 45px;
+
+            background: #eee;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+
+        .project-detail-image img {
+            width: 100%;
+
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================================================
+           İÇERİK ALANI
+           ========================================================= */
+
+        .project-detail-content-wrapper {
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            background: #fff;
+
+            border-radius: 20px;
+
+            padding: 45px 50px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.07);
+        }
+
+
+        .project-detail-content-wrapper h2 {
+
+            margin: 0 0 25px;
+
+            font-size: 28px;
+
+            color: #222;
+
+            font-weight: 600;
+
+            position: relative;
+
+            padding-left: 18px;
+        }
+
+
+        .project-detail-content-wrapper h2::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 4px;
+
+            width: 4px;
+
+            height: 30px;
+
+            border-radius: 5px;
+
+            background: #bf1e2e;
+        }
+
+
+        .project-detail-content {
+
+            color: #555;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+        }
+
+
+        .project-detail-content p {
+
+            margin: 0 0 20px;
+        }
+
+
+        .project-detail-content p:last-child {
+
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================================
+           ALT BİLGİ ALANI
+           ========================================================= */
+
+        .project-info {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+
+            margin-top: 35px;
+
+            padding-top: 30px;
+
+            border-top: 1px solid #eee;
+        }
+
+
+        .project-info-item {
+
+            padding: 18px;
+
+            background: #f8f9fb;
+
+            border-radius: 12px;
+        }
+
+
+        .project-info-item span {
+
+            display: block;
+
+            font-size: 12px;
+
+            color: #888;
+
+            margin-bottom: 5px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        .project-info-item strong {
+
+            font-size: 15px;
+
+            color: #333;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================================================
+           GERİ DÖN BUTONU
+           ========================================================= */
+
+        .project-back-wrapper {
+
+            text-align: center;
+
+            margin-top: 45px;
+        }
+
+
+        .project-back {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            background: #bf1e2e;
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease;
+        }
+
+
+        .project-back:hover {
+
+            background: #a71927;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           PROJE BULUNAMADI
+           ========================================================= */
+
+        .project-not-found {
+
+            max-width: 700px;
+
+            margin: 100px auto;
+
+            padding: 50px 30px;
+
+            text-align: center;
+
+            background: #fff;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .project-not-found h1 {
+
+            margin-bottom: 15px;
+
+            font-size: 30px;
+
+            color: #222;
+        }
+
+
+        .project-not-found p {
+
+            margin-bottom: 25px;
+
+            color: #666;
+        }
+
+
+        /* =========================================================
+           TABLET
+           ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .project-detail-page {
+
+                padding-top: 90px;
+            }
+
+
+            .project-detail-header h1 {
+
+                font-size: 34px;
+            }
+
+
+            .project-detail-image {
+
+                height: 400px;
+            }
+
+
+            .project-detail-content-wrapper {
+
+                padding: 35px;
+            }
+
+        }
+
+
+        /* =========================================================
+           MOBİL
+           ========================================================= */
+
+        @media (max-width: 600px) {
+
+            .project-detail-page {
+
+                padding-top: 80px;
+
+                padding-bottom: 50px;
+            }
+
+
+            .project-detail-container {
+
+                padding: 0 15px;
+            }
+
+
+            .project-detail-header {
+
+                margin-bottom: 30px;
+            }
+
+
+          
+
+            .project-detail-header h1 {
+
+                font-size: 27px;
+
+                line-height: 1.35;
+            }
+
+
+            .project-detail-intro {
+
+                font-size: 15px;
+
+                line-height: 1.7;
+            }
+
+
+            .project-detail-image {
+
+                height: 260px;
+
+                border-radius: 15px;
+
+                margin-bottom: 30px;
+            }
+
+
+            .project-detail-content-wrapper {
+
+                padding: 25px 20px;
+
+                border-radius: 15px;
+            }
+
+
+            .project-detail-content-wrapper h2 {
+
+                font-size: 22px;
+
+                padding-left: 14px;
+            }
+
+
+            .project-detail-content-wrapper h2::before {
+
+                height: 25px;
+            }
+
+
+            .project-detail-content {
+
+                font-size: 15px;
+
+                line-height: 1.8;
+            }
+
+
+            .project-info {
+
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+            }
+
+
+            .project-back {
+
+                width: 100%;
+
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+   <header class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <a href="index.html">
+            <img
+                id="siteLogo"
+                src="logo/ban_logo_tr.png"
+                alt="BAN Vakfı Logo"
+                class="logo-img"
+            >
+        </a>
+    </div>
+
+
+    <!-- SAĞ TARAF -->
+    <div class="nav-right">
+
+        <!-- DİL SEÇİMİ -->
+        <div class="language-selector">
+
+            <button
+                type="button"
+                class="language-button"
+                id="languageButton">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span id="currentLanguage">TR</span>
+
+                <i class="fa-solid fa-chevron-down language-arrow"></i>
+
+            </button>
+
+
+            <div class="language-dropdown" id="languageDropdown">
+
+                <button
+                    type="button"
+                    class="language-option active"
+                    onclick="changeLang('tr')"
+                    data-language="tr">
+
+                    <span>TR</span>
+                    <small>Türkçe</small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="language-option"
+                    onclick="changeLang('ku')"
+                    data-language="ku">
+
+                    <span>KU</span>
+                    <small>Kurdî</small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="language-option"
+                    onclick="changeLang('en')"
+                    data-language="en">
+
+                    <span>EN</span>
+                    <small>English</small>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BURGER -->
+        <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menüyü aç">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MENÜ -->
+    <nav class="mobile-menu" id="mobileMenu">
+
+        <div class="menu-header">
+
+            <span data-lang="menu_title">
+               
+            </span>
+
+            <span class="menu-line"></span>
+
+        </div>
+
+
+        <a href="index.html" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-house"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_home">
+                BAN
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="index.html#about" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-circle-info"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_about">
+                Hakkımızda
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="index.html#podcast" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-microphone"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_podcast">
+                Podcast
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="index.html#project" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_projects">
+                Projeler
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="rapor.html" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_reports">
+                Raporlar
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="index.html#contact" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_contact">
+                İletişim
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <div class="menu-footer">
+
+            <span>
+                BAN Vakfı
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </div>
+
+    </nav>
+</header>
+
+
+    <!-- =========================================================
+         PROJE DETAY
+         ========================================================= -->
+
+    <main class="project-detail-page">
+
+        <div
+            class="project-detail-container"
+            id="projectContainer"
+        >
+
+
+            <!-- PROJE BAŞLIK -->
+
+            <header class="project-detail-header">
+
+                
+
+                <h1 id="projectTitle">
+                    Proje
+                </h1>
+
+
+                <p
+                    class="project-detail-intro"
+                    id="projectIntro"
+                >
+                </p>
+
+            </header>
+
+
+            <!-- PROJE FOTOĞRAFI -->
+
+            <div class="project-detail-image">
+
+                <img
+                    id="projectImage"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+            <!-- PROJE İÇERİĞİ -->
+
+            <section class="project-detail-content-wrapper">
+
+                <h2>
+                    Proje Hakkında
+                </h2>
+
+
+                <div
+                    class="project-detail-content"
+                    id="projectDescription"
+                >
+                </div>
+
+
+                <!-- PROJE BİLGİLERİ -->
+
+                <div class="project-info">
+
+                    <div class="project-info-item">
+
+                        <span>
+                            Proje
+                        </span>
+
+                        <strong id="projectNumber">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="project-info-item">
+
+                       
+
+                       
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- GERİ DÖN -->
+
+            <div class="project-back-wrapper">
+
+                <a
+                    href="index.html#project"
+                    class="project-back"
+                >
+                    ← Projelere Dön
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+ <footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- 1. KOLON : HAKKIMIZDA -->
+        <div class="footer-col footer-about">
+
+            <h3>BAN Vakfı</h3>
+
+            <p data-lang="footer_about_text">
+                Bilgi üretimini, kültürel çeşitliliği ve
+                nitelikli dijital yayıncılığı destekleyen
+                bağımsız bir blog & podcast platformu.
+            </p>
+
+        </div>
+
+
+        <!-- 2. KOLON : HIZLI MENÜ -->
+        <div class="footer-col">
+
+            <h4 data-lang="footer_menu_title">
+                Hızlı Menü
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="#home">
+                        Ana Sayfa
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#blog">
+                        Raporlar
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#podcast">
+                        Podcast
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        Hakkımızda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        İletişim
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 3. KOLON : YAYINLAR -->
+        <div class="footer-col">
+
+            <h4>
+                Yayınlarımız
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="#blog">
+                        Raporlar
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#podcast">
+                        Podcast Bölümleri
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 4. KOLON : YASAL + SOSYAL -->
+        <div class="footer-col">
+
+            <h4>
+                Yasal Bilgilendirme
+            </h4>
+
+            <ul class="footer-legal">
+
+                <li>
+                    <a
+                        href="ban dosylar/tr/BAN KVKK.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        KVKK Aydınlatma Metni
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="ban dosylar/tr/BAN KVKK.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Gizlilik Politikası
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <h4 class="footer-social-title">
+                Bizi Takip Edin
+            </h4>
+
+            <div class="footer-socials">
+
+                <!-- Instagram -->
+                <a
+                    href="https://www.instagram.com/weqfa_ban/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+                <!-- X -->
+                <a
+                    href="https://x.com/banvakfi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X">
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+
+                <!-- Spotify -->
+                <a
+                    href="https://open.spotify.com/show/7p68ISUEB62W9hC2dD6zTM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Spotify">
+
+                    <i class="fa-brands fa-spotify"></i>
+
+                </a>
+
+
+                <!-- YouTube -->
+                <a
+                    href="https://www.youtube.com/@BanVakf%C4%B1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+
+                <!-- Apple Podcasts -->
+                <a
+                    href="https://podcasts.apple.com/tr/podcast/bane%C5%9Fan/id1896906237?l=tr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Apple Podcasts">
+
+                    <i class="fa-solid fa-podcast"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER ALT BAR -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p data-lang="footer_copyright">
+                © 2026 BAN Vakfı. Tüm Hakları Saklıdır.
+            </p>
+
+            
+               
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<script src="script.js"></script>
+<script src="tr.js"></script>
+<script src="ku.js"></script>
+<script src="en.js"></script>
+</body>
+</html>
+
+
+    <script>
+
+        /* =========================================================
+           PROJE VERİLERİ
+           ========================================================= */
+
+        const projects = {
+
+            /* -----------------------------------------------------
+               PROJE 1
+               ----------------------------------------------------- */
+
+            1: {
+
+                title:
+                    "Kürt Tarihinin Ana Kaynakları",
+
+               
+
+                image:
+                    "proje_image/1proje.jpeg",
+
+                intro:
+                    "Kürt tarihinin anlaşılması ve araştırılması açısından temel kaynakların ele alındığı çalışma.",
+
+                
+
+                description: `
+
+                    <p>
+                       Yaklaşık 5 yıl önce başlayan ve hâlihazırda Vakfımız bünyesinde yürütülen “Kürt Tarihinin Ana Kaynakları: Analitik ve Notlandırılmış Bir Bibliyografya” projesi, 40’ı aşkın akademisyen ve tarihçinin katkısıyla son aşamaya gelmiştir.
+Kürtlerin yüzyıllardır “tarihsiz halklar” kategorisine dâhil edilerek tarih dışı bırakılması, yalnızca siyasetin bir nesnesi olarak görülmesi, Kürt tarihine dair kaynakların farklı alfabe ve dillerde dağınık biçimde bulunması ve resmî tarih anlayışlarının uzun süre Kürt varlığını inkâr etmesi; bu alanda doğrudan ya da dolaylı araştırma yürütmek isteyen akademisyen ve araştırmacıları ciddi biçimde zorlamaktadır. Pek çok lisansüstü öğrencisi, akademisyen ve yazar; henüz fikir aşamasındayken dahi kaynakların dağınıklığı ve erişim güçlükleri nedeniyle bu çalışmalardan vazgeçmektedir. Bu duruma akademideki ve sahadaki yapısal zorluklar da eklendiğinde, alandaki bilgi üretimi sınırlı kalmaktadır. Vakfımız bu kıymetli çalışma ile hem tarihsel adaletsizliğin giderilmesine mütevazı bir katkı sunmayı hem de Kürt tarihinin ana kaynaklarına herkesin erişimini kolaylaştırmayı amaçlamaktadır.
+
+Kürt tarihine dair temel kaynaklar, Arap, Arami, Süryani, Pehlevi, Ermeni, Grek, Latin ve Kiril alfabeleriyle yazılmış çok sayıda farklı dilde üretilmiş olup İstanbul, Ankara, Bağdat, Tahran, Şam, Moskova ve Erivan’ın yanı sıra İngiltere, Fransa, Almanya ve ABD’deki arşiv ve kütüphanelerde dağınık biçimde yer almaktadır. Bu dağınıklık, konuyu çalışan araştırmacıların kapsamını daraltmakta ve birçok çalışmanın kaynağa ulaşılamadığı için hayata geçirilememesine yol açmaktadır. Projemiz, söz konusu kaynakları derleyerek Kürt tarihi araştırmalarının nesnel ve sağlam bir zemine oturmasına katkı sunmayı hedeflemektedir.
+
+Çalışma, yapay zekâ destekli bir web sitesi aracılığıyla kamuoyunun erişimine sunulacaktır. Çok dilli olarak tasarlanan bu platform, kullanıcıların bulundukları konuma ve dil tercihlerine göre kaynaklara kolayca ulaşmalarını sağlayacaktır.
+</p>
+
+                `
+
+            },
+
+
+            /* -----------------------------------------------------
+               PROJE 2
+               ----------------------------------------------------- */
+
+            2: {
+
+                title:
+                    "Sivil Toplum Örgütleri ve Aktörleri Arası Diyalog Çalıştayı",
+
+               
+
+                image:
+                    "proje_image/2proje.jpeg",
+
+                intro:
+                    "Sivil toplum örgütleri ve farklı aktörler arasında iletişim, iş birliği ve diyaloğun güçlendirilmesine yönelik çalıştay.",
+
+        
+
+                description: `
+
+                    <p>
+                        Ban Vakfı tarafından 26-28 Nisan 2024 tarihlerinde Şanlıurfa'da (Riha) düzenlenen “Sivil Toplum Örgütleri ve Aktörleri Arası Diyalog Çalıştayı”, Kürt sivil toplum örgütlerinin deneyimlerini, karşılaştıkları yapısal sorunları ve iş birliği imkânlarını ele almıştır. Dört oturum halinde gerçekleştirilen programda; katılımcı kurumların faaliyetleri, merkezi otorite ve uluslararası fon sağlayıcılarla ilişkiler, örgüt içi demokrasi ve toplumsal cinsiyet konuları tartışılmıştır. Çalıştay, sivil toplum diyaloğunu sürdürmeye yönelik ortak stratejilerin belirlenmesi, kurumsal ortaklık mekanizmalarının kurulması ve geleceğe dönük bir çalışma takviminin oluşturulmasıyla tamamlanmıştır.
+                    </p>
+
+                `
+
+            },
+
+
+            /* -----------------------------------------------------
+               PROJE 3
+               ----------------------------------------------------- */
+
+            3: {
+
+                title:
+                    "Bütüncül Kürt Tarihi Yazımı Çalıştayı",
+
+               
+
+                image:
+                    "proje_image/3proje.jpeg",
+
+                intro:
+                    "Kürt tarihinin farklı dönemlerinin ve kaynaklarının bütüncül bir perspektifle ele alındığı çalıştay.",
+
+               
+
+                description: `
+
+                    <p>
+                      13 Ağustos 2024 tarihinde 30'a yakın tarih için online katılımıyla Bütüncül Kürt Tarihi Yazımı Çalıştayı'nı gerçekleştirdik. 
+
+Bu proje, antikçağlardan günümüze Kürt ve Kürdistan tarihine dair tüm birincil/ana kaynakları derleyerek kronolojik ve kategorik bir bütüncül Kürt tarihyazımı oluşturmayı amaçlamaktadır. Yaklaşık 30 tarihçinin dâhil olduğu, 2021'de başlanıp 2025'te tamamlanması hedeflenen ve Kürtçe, İngilizce, Türkçe 12 ciltten oluşan Kürt Tarihinin Yazılı Ana Kaynakları adlı çalışmayla başlatılan proje, farklı dillerdeki ve egemen devletlerin arşivlerindeki dağınık belgeleri eleştirel bir yöntemle araştırmacıların istifadesine sunmayı hedeflemektedir. İki düzineyi bulması planlanan Antikçağdan Günümüze Kürt/Kürdistan Tarihi siyasi tarihyazımı tamamlandıktan sonra, Annales, maduniyet ve post-kolonyal ekollerin perspektifiyle iktisat, düşünce, sosyal, sözlü ve biyografi gibi alanlara genişleyerek egemen ulus-devletlerin "tarihsizlik", inkâr ve folklorikleştirme politikalarını aşan akademik bir külliyat ortaya koymayı amaçlamaktadır.
+</p>
+
+                `
+
+            }
+
+        };
+
+
+        /* =========================================================
+           URL'DEN PROJE ID AL
+           ========================================================= */
+
+        const urlParams =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const projectId =
+            urlParams.get("id");
+
+
+        /* =========================================================
+           HTML ELEMENTLERİ
+           ========================================================= */
+
+        const projectContainer =
+            document.getElementById(
+                "projectContainer"
+            );
+
+        const projectTitle =
+            document.getElementById(
+                "projectTitle"
+            );
+
+        
+
+        const projectIntro =
+            document.getElementById(
+                "projectIntro"
+            );
+
+        const projectImage =
+            document.getElementById(
+                "projectImage"
+            );
+
+        const projectDescription =
+            document.getElementById(
+                "projectDescription"
+            );
+
+        const projectNumber =
+            document.getElementById(
+                "projectNumber"
+            );
+
+        const projectType =
+            document.getElementById(
+                "projectType"
+            );
+
+        const metaDescription =
+            document.getElementById(
+                "metaDescription"
+            );
+
+
+        /* =========================================================
+           PROJEYİ GÖSTER
+           ========================================================= */
+
+        const project =
+            projects[projectId];
+
+
+        if (project) {
+
+            /* Başlık */
+
+            projectTitle.textContent =
+                project.title;
+
+
+            /* Kategori */
+
+           
+
+            /* Kısa açıklama */
+
+            projectIntro.textContent =
+                project.intro;
+
+
+            /* Fotoğraf */
+
+            projectImage.src =
+                project.image;
+
+
+            projectImage.alt =
+                project.title;
+
+
+            /* Detay */
+
+            projectDescription.innerHTML =
+                project.description;
+
+
+            /* Bilgiler */
+
+            projectNumber.textContent =
+                "Proje " + projectId;
+
+
+            projectType.textContent =
+                project.type;
+
+
+            /* Sayfa başlığı */
+
+            document.title =
+                project.title +
+                " | BAN Vakfı";
+
+
+            /* SEO açıklaması */
+
+            metaDescription.setAttribute(
+                "content",
+                project.intro
+            );
+
+        }
+
+
+        /* =========================================================
+           PROJE BULUNAMADI
+           ========================================================= */
+
+        else {
+
+            projectContainer.innerHTML = `
+
+                <div class="project-not-found">
+
+                    <h1>
+                        Proje Bulunamadı
+                    </h1>
+
+                    <p>
+                        Aradığınız proje mevcut değil
+                        veya kaldırılmış olabilir.
+                    </p>
+
+                    <a
+                        href="index.html#project"
+                        class="project-back"
+                    >
+                        ← Projelere Dön
+                    </a>
+
+                </div>
+
+            `;
+
+            document.title =
+                "Proje Bulunamadı | BAN Vakfı";
+
+        }
+
+    </script>
+
+

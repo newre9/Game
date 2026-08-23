@@ -1,0 +1,2810 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+ <link
+    rel="icon"
+    type="image/png"
+    href="logo/ban_logo_tr.png"
+>
+    <title>BAN Vakfı | Hakkımızda</title>
+
+    <!-- Ana CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+<style>
+
+/* =========================================================
+   BAN VAKFI - HAKKIMIZDA
+   RESPONSIVE / MOBILE FIRST
+   ========================================================= */
+
+:root {
+    --ban-red: #bf1e2e;
+    --ban-dark: #222222;
+    --ban-text: #555555;
+    --ban-light: #f7f7f8;
+    --ban-border: #e5e5e5;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    color: var(--ban-text);
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   ANA İÇERİK
+   ========================================================= */
+
+.about-container {
+    width: 100%;
+    padding: 50px 15px;
+    background: #fff;
+}
+
+.about-layout {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* =========================================================
+   SOL MENÜ
+   ========================================================= */
+
+.about-sidebar {
+    position: relative;
+    width: 100%;
+}
+
+.about-sidebar h3 {
+    margin: 0 0 15px;
+    color: var(--ban-dark);
+    font-size: 18px;
+}
+
+.about-nav {
+    width: 100%;
+
+    display: flex;
+    overflow-x: auto;
+
+    gap: 6px;
+    padding-bottom: 8px;
+
+    scrollbar-width: thin;
+}
+
+.about-nav-link {
+    flex: 0 0 auto;
+
+    display: block;
+
+    padding: 10px 13px;
+
+    border: 1px solid var(--ban-border);
+    border-radius: 4px;
+
+    color: #555;
+    background: #fff;
+
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    transition: .2s ease;
+}
+
+.about-nav-link:hover,
+.about-nav-link.active {
+    color: var(--ban-red);
+    border-color: var(--ban-red);
+    background: #fff8f8;
+}
+
+/* =========================================================
+   İÇERİK
+   ========================================================= */
+
+.about-content {
+    width: 100%;
+    min-width: 0;
+}
+
+.about-section {
+    width: 100%;
+    margin-bottom: 70px;
+    scroll-margin-top: 25px;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--ban-red);
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.about-section h2 {
+    margin: 0;
+
+    color: var(--ban-dark);
+
+    font-size: clamp(25px, 7vw, 34px);
+    line-height: 1.3;
+}
+
+.red-line {
+    width: 50px;
+    height: 3px;
+
+    margin: 16px 0 24px;
+
+    background: var(--ban-red);
+}
+
+.about-section p {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 0 18px;
+
+    color: var(--ban-text);
+
+    font-size: 13px;
+    line-height: 1.9;
+
+    overflow-wrap: break-word;
+}
+
+#hakkimizda p,
+#misyon p {
+    text-align: justify;
+    text-align-last: left;
+}
+
+/* =========================================================
+   QUOTE / MİSYON
+   ========================================================= */
+
+.quote-box {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin: 20px 0 25px;
+    padding: 20px;
+
+    background: var(--ban-light);
+
+    border-left: 4px solid var(--ban-red);
+}
+
+.quote-box i {
+    flex: 0 0 auto;
+
+    margin-top: 4px;
+
+    color: var(--ban-red);
+    font-size: 20px;
+}
+
+.quote-box p {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 13px;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+/* =========================================================
+   ORGANİZASYON
+   ========================================================= */
+
+.organization-wrapper {
+    width: 100%;
+
+    margin-top: 30px;
+    padding: 20px 12px;
+
+    background: #fafafa;
+
+    border: 1px solid var(--ban-border);
+
+    overflow: hidden;
+}
+
+.real-org-chart {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+/* =========================================================
+   ANA VAKIF
+   ========================================================= */
+
+.org-main-box {
+    width: 100%;
+    max-width: 280px;
+
+    margin: 0 auto;
+    padding: 20px 15px;
+
+    background: var(--ban-red);
+    color: #fff;
+
+    text-align: center;
+
+    border-radius: 5px;
+
+    box-shadow: 0 10px 25px rgba(191,30,46,.16);
+}
+
+.org-main-box i {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 22px;
+}
+
+.org-main-box strong {
+    display: block;
+
+    font-size: 15px;
+}
+
+.org-main-box span {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 10px;
+
+    opacity: .85;
+}
+
+.org-main-line {
+    width: 1px;
+    height: 25px;
+
+    margin: 0 auto;
+
+    background: #ccc;
+}
+
+/* =========================================================
+   ÜST ORGANLAR
+   ========================================================= */
+
+.org-top-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+}
+
+/* =========================================================
+   ORGANİZASYON KART
+   ========================================================= */
+
+.org-card {
+    width: 100%;
+
+    background: #fff;
+
+    border: 1px solid var(--ban-border);
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,.035);
+}
+
+.org-card-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    border-bottom: 1px solid var(--ban-border);
+}
+
+.org-card-header > i {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f8e9eb;
+    color: var(--ban-red);
+
+    border-radius: 50%;
+
+    font-size: 15px;
+}
+
+.org-card-header h3 {
+    margin: 0 0 3px;
+
+    color: #222;
+
+    font-size: 14px;
+}
+
+.org-card-header span {
+    color: #888;
+    font-size: 10px;
+}
+
+/* =========================================================
+   LİSTE
+   ========================================================= */
+
+.org-card ul {
+    margin: 0;
+
+    padding: 8px 16px 14px;
+
+    list-style: none;
+}
+
+.org-card ul li {
+    position: relative;
+
+    padding: 9px 0 9px 15px;
+
+    color: #555;
+
+    font-size: 12px;
+
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.org-card ul li:last-child {
+    border-bottom: none;
+}
+
+.org-card ul li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 16px;
+
+    width: 5px;
+    height: 5px;
+
+    background: var(--ban-red);
+
+    border-radius: 50%;
+}
+
+.org-connector {
+    width: 1px;
+    height: 25px;
+
+    margin: 0 auto;
+
+    background: #ccc;
+}
+
+/* =========================================================
+   YÖNETİM KURULU
+   ========================================================= */
+
+.management-card {
+    width: 100%;
+}
+
+.management-list {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.management-person {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.management-person:last-child {
+    border-bottom: none;
+}
+
+.person-name {
+    display: block;
+
+    color: #222;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.person-role {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #888;
+
+    font-size: 10px;
+}
+
+.management-person.president {
+    background: #fff8f8;
+}
+
+.management-person.president .person-name {
+    color: var(--ban-red);
+}
+
+/* =========================================================
+   YEDEK YÖNETİM
+   ========================================================= */
+
+.reserve-card {
+    width: 100%;
+}
+
+.reserve-list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+.reserve-list div {
+    padding: 15px 8px;
+
+    color: #444;
+
+    font-size: 10px;
+
+    text-align: center;
+
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.reserve-list div:nth-child(even) {
+    border-right: none;
+}
+
+.reserve-list div:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.reserve-list span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--ban-red);
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   KURUCU ÜYELER
+   ========================================================= */
+
+.founders-section {
+    width: 100%;
+
+    background: #fff;
+
+    border: 1px solid var(--ban-border);
+
+    box-shadow: 0 5px 18px rgba(0,0,0,.035);
+}
+
+.founders-title {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    border-bottom: 1px solid var(--ban-border);
+}
+
+.founders-title > i {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f8e9eb;
+    color: var(--ban-red);
+
+    border-radius: 50%;
+}
+
+.founders-title h3 {
+    margin: 0 0 3px;
+
+    color: #222;
+
+    font-size: 14px;
+}
+
+.founders-title span {
+    color: #888;
+
+    font-size: 10px;
+}
+
+.founders-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+.founders-grid div {
+    min-width: 0;
+
+    padding: 12px 9px;
+
+    color: #555;
+
+    font-size: 10px;
+
+    text-align: center;
+
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    overflow-wrap: break-word;
+}
+
+.founders-grid div:nth-child(even) {
+    border-right: none;
+}
+
+.founders-grid div:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+/* =========================================================
+   BELGE KARTLARI
+   ========================================================= */
+
+.document-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.document-card {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border: 1px solid var(--ban-border);
+
+    background: #fff;
+    color: var(--ban-dark);
+
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.document-card:hover {
+    border-color: var(--ban-red);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 20px rgba(0,0,0,.05);
+}
+
+.document-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--ban-red);
+    color: #fff;
+
+    font-size: 16px;
+
+    border-radius: 4px;
+}
+
+.document-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.document-info h3 {
+    margin: 0 0 4px;
+
+    color: #222;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    overflow-wrap: break-word;
+}
+
+.document-info span {
+    display: block;
+
+    color: #888;
+
+    font-size: 9px;
+}
+
+.document-arrow {
+    flex: 0 0 auto;
+
+    color: var(--ban-red);
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   FİNANS
+   ========================================================= */
+
+.financial-intro {
+    margin-bottom: 20px !important;
+}
+
+.finance-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.finance-card {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border: 1px solid var(--ban-border);
+
+    background: #fff;
+
+    border-radius: 4px;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.finance-card:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--ban-red);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.05);
+}
+
+.finance-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f7f7f7;
+
+    color: var(--ban-red);
+
+    border-radius: 4px;
+}
+
+.finance-card > div:nth-child(2) {
+    min-width: 0;
+    flex: 1;
+}
+
+.finance-card h3 {
+    margin: 0 0 4px;
+
+    color: #222;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.finance-card p {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 9px;
+}
+
+.finance-card .finance-link {
+    flex: 0 0 auto;
+
+    color: var(--ban-red);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .about-container {
+        padding: 65px 30px;
+    }
+
+    .about-nav {
+        gap: 8px;
+    }
+
+    .about-nav-link {
+        font-size: 12px;
+        padding: 11px 14px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+    }
+
+    .quote-box {
+        padding: 25px;
+    }
+
+    .quote-box p {
+        font-size: 14px;
+    }
+
+    .management-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .management-person {
+        border-right: 1px solid #eee;
+    }
+
+    .management-person:nth-child(even) {
+        border-right: none;
+    }
+
+    .management-person:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+
+    .founders-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .founders-grid div:nth-child(even) {
+        border-right: 1px solid #eee;
+    }
+
+    .founders-grid div:nth-child(3n) {
+        border-right: none;
+    }
+
+    .founders-grid div:nth-last-child(-n+3) {
+        border-bottom: none;
+    }
+
+    .finance-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+    .about-container {
+        padding: 85px 30px;
+    }
+
+    .about-layout {
+        display: grid;
+
+        grid-template-columns:
+            230px minmax(0, 1fr);
+
+        gap: 60px;
+
+        align-items: start;
+    }
+
+    .about-sidebar {
+        position: sticky;
+        top: 30px;
+    }
+
+    .about-sidebar h3 {
+        display: block;
+
+        margin-bottom: 18px;
+
+        font-size: 19px;
+    }
+
+    .about-nav {
+        display: flex;
+        flex-direction: column;
+
+        overflow: visible;
+
+        gap: 0;
+    }
+
+    .about-nav-link {
+        width: 100%;
+
+        padding: 11px 14px;
+
+        border: 0;
+        border-left: 2px solid transparent;
+
+        border-radius: 0;
+
+        white-space: normal;
+
+        font-size: 13px;
+    }
+
+    .about-nav-link:hover,
+    .about-nav-link.active {
+        border-left-color: var(--ban-red);
+
+        background: #fafafa;
+    }
+
+    .about-section {
+        margin-bottom: 90px;
+
+        scroll-margin-top: 30px;
+    }
+
+    .about-section h2 {
+        font-size: 34px;
+    }
+
+    .about-section p {
+        font-size: 14px;
+    }
+
+    .quote-box {
+        gap: 20px;
+        padding: 28px;
+    }
+
+    .quote-box p {
+        font-size: 16px;
+    }
+
+    /* ORGANİZASYON */
+
+    .organization-wrapper {
+        padding: 40px 25px;
+    }
+
+    .org-top-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 25px;
+    }
+
+    .reserve-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .reserve-list div {
+        border-bottom: none;
+    }
+
+    .reserve-list div:nth-child(even) {
+        border-right: 1px solid #eee;
+    }
+
+    .reserve-list div:last-child {
+        border-right: none;
+    }
+
+    .founders-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .founders-grid div:nth-child(3n) {
+        border-right: none;
+    }
+
+    .founders-grid div:nth-last-child(-n+3) {
+        border-bottom: none;
+    }
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .about-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .about-layout {
+        gap: 70px;
+    }
+}
+
+/* =========================================================
+   KÜÇÜK TELEFONLAR
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .about-container {
+        padding: 40px 12px;
+    }
+
+    .about-section {
+        margin-bottom: 55px;
+    }
+
+    .about-section h2 {
+        font-size: 24px;
+    }
+
+    .about-section p {
+        font-size: 12px;
+        line-height: 1.85;
+    }
+
+    .quote-box {
+        padding: 16px;
+    }
+
+    .quote-box p {
+        font-size: 12px;
+    }
+
+    .organization-wrapper {
+        padding: 15px 8px;
+    }
+
+    .org-main-box {
+        max-width: 230px;
+    }
+
+    .org-card-header {
+        padding: 13px;
+    }
+
+    .org-card ul {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .founders-grid div {
+        font-size: 9px;
+        padding: 11px 5px;
+    }
+
+    .document-card {
+        padding: 11px;
+        gap: 9px;
+    }
+
+    .document-icon {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+
+        font-size: 14px;
+    }
+
+    .document-info h3 {
+        font-size: 10px;
+    }
+
+    .finance-card {
+        padding: 12px;
+    }
+
+    .finance-icon {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+    }
+
+    .finance-card h3 {
+        font-size: 10px;
+    }
+
+    .finance-card .finance-link {
+        font-size: 9px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+<header class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                id="siteLogo"
+                src="logo/ban_logo_tr.png"
+                alt="BAN Vakfı Logo"
+                data-lang-alt="logo_alt"
+                class="logo-img"
+            >
+
+        </a>
+
+    </div>
+
+
+    <!-- SAĞ TARAF -->
+    <div class="nav-right">
+
+
+        <!-- DİL SEÇİMİ -->
+        <div class="language-selector">
+
+            <button
+                type="button"
+                class="language-button"
+                id="languageButton"
+                aria-label="Dil seçimi"
+                data-lang-aria="language_selection"
+            >
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span id="currentLanguage">
+                    TR
+                </span>
+
+                <i class="fa-solid fa-chevron-down language-arrow"></i>
+
+            </button>
+
+
+            <div
+                class="language-dropdown"
+                id="languageDropdown"
+            >
+
+
+                <!-- TÜRKÇE -->
+
+                <button
+                    type="button"
+                    class="language-option active"
+                    onclick="changeLang('tr')"
+                    data-language="tr"
+                >
+
+                    <span>
+                        TR
+                    </span>
+
+                    <small data-lang="language_turkish">
+                        Türkçe
+                    </small>
+
+                </button>
+
+
+                <!-- KÜRTÇE -->
+
+                <button
+                    type="button"
+                    class="language-option"
+                    onclick="changeLang('ku')"
+                    data-language="ku"
+                >
+
+                    <span>
+                        KU
+                    </span>
+
+                    <small data-lang="language_kurdish">
+                        Kurdî
+                    </small>
+
+                </button>
+
+
+                <!-- İNGİLİZCE -->
+
+                <button
+                    type="button"
+                    class="language-option"
+                    onclick="changeLang('en')"
+                    data-language="en"
+                >
+
+                    <span>
+                        EN
+                    </span>
+
+                    <small data-lang="language_english">
+                        English
+                    </small>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BURGER -->
+
+        <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menüyü aç"
+            data-lang-aria="menu_open"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- MENÜ -->
+
+    <nav
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+
+        <!-- MENÜ BAŞLIĞI -->
+
+        <div class="menu-header">
+
+            <span data-lang="menu_title">
+                Menü
+            </span>
+
+            <span class="menu-line"></span>
+
+        </div>
+
+
+
+        <!-- ANA SAYFA -->
+
+        <a
+            href="index.html"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-house"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_home"
+            >
+                BAN
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- HAKKIMIZDA -->
+
+        <a
+            href="#about"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_about"
+            >
+                Hakkımızda
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- PODCAST -->
+
+        <a
+            href="#podcast"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-microphone"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_podcast"
+            >
+                Podcast
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- PROJELER -->
+
+        <a
+            href="#project"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-diagram-project"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_projects"
+            >
+                Projeler
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- RAPORLAR -->
+
+        <a
+            href="rapor.html"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_reports"
+            >
+                Raporlar
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- İLETİŞİM -->
+
+        <a
+            href="#contact"
+            class="menu-link"
+        >
+
+            <span class="menu-icon">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_contact"
+            >
+                İletişim
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+
+        <!-- MENÜ FOOTER -->
+
+        <div class="menu-footer">
+
+            <span data-lang="site_name">
+                BAN Vakfı
+            </span>
+
+            <span data-lang="menu_copyright">
+                © 2026
+            </span>
+
+        </div>
+
+
+    </nav>
+
+</header>
+
+<section class="video-hero">
+
+    <div class="slider">
+        
+        <img src="slider_image/01.png" class="slide active">
+        
+    </div>
+
+    <div class="video-overlay"></div>
+
+ 
+
+</section>
+
+
+
+<section class="about-container">
+
+    <div class="about-layout">
+
+        <!-- SOL MENÜ -->
+
+        <aside class="about-sidebar">
+
+            <h3 data-lang="about_menu_title">
+                Hakkımızda
+            </h3>
+
+            <nav class="about-nav">
+
+                <a
+                    href="#hakkimizda"
+                    class="about-nav-link active"
+                    data-lang="about_nav_who">
+                    Hakkımızda
+                </a>
+
+                <a
+                    href="#misyon"
+                    class="about-nav-link"
+                    data-lang="about_nav_mission">
+                    Misyonumuz/Vizyonumuz
+                </a>
+
+                <a
+                    href="#organizasyon"
+                    class="about-nav-link"
+                    data-lang="about_nav_org">
+                    Organizasyon Şeması
+                </a>
+
+                <a
+                    href="#vakif-senedi"
+                    class="about-nav-link"
+                    data-lang="about_nav_charter">
+                    Vakıf Senedi
+                </a>
+
+                <a
+                    href="#politikalar"
+                    class="about-nav-link"
+                    data-lang="about_nav_policy">
+                    Politika Belgelerimiz
+                </a>
+
+                <a
+                    href="#gelir-gider"
+                    class="about-nav-link"
+                    data-lang="about_nav_finance">
+                    Faaliyet ve Mali Raporlarımız
+                </a>
+
+                <a
+                    href="#kvkk"
+                    class="about-nav-link"
+                    data-lang="about_nav_kvkk">
+                    KVKK ve Kişisel Verilerin Korunması
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- İÇERİK -->
+
+        <main class="about-content">
+
+
+            <!-- ==========================================
+                 HAKKIMIZDA
+            =========================================== -->
+
+            <section
+                id="hakkimizda"
+                class="about-section">
+
+                <span
+                    class="section-label"
+                    data-lang="about_label">
+                    BAN VAKFI
+                </span>
+
+                <h2 data-lang="about_title">
+                    Hakkımızda
+                </h2>
+
+                <div class="red-line"></div>
+
+                <p data-lang="about_text_1">
+                    Vakfımızın kurucuları 12’si kadın, 20 kişiden oluşmaktadır.
+                    Kurucularımızın çoğu uzun yıllardır birbirini tanıyan,
+                    farklı sivil toplum örgütlerinde birlikte uzun veya kısa
+                    süreli çalışmış insanlardan oluşmaktadır.
+                </p>
+
+                <p data-lang="about_text_2">
+                    Vakfın kurucularının her biri daha önce çalıştıkları
+                    kurumları ileri taşımış, değer katmış vizyon sahibi
+                    kişilerdir. Kollektif ve demokratik bir işleyişe dair
+                    fikri ve pratiği olan kişilerdir. Ayrıca tamamen sivil
+                    alan inşa etme süreçlerine dair değerli bilgi birikimine
+                    sahiplerdir.
+                </p>
+
+                <p data-lang="about_text_3">
+                    Ocak 2022'de vakıf kuruluş hazırlıklarına başlanmıştır.
+                    Kurucular, vakfın amaç ve misyonunu, faaliyet alanlarını
+                    tartıştığımız bir düzine toplantı gerçekleştirdi.
+                    Bu toplantılarda, kolektif çalışma, demokratik işleyiş,
+                    şeffaflık, kapsayıcılık gibi temel kavramlarda netleşme
+                    sağlandıktan sonra Aralık 2022'de resmi başvuruda bulunduk
+                    ve akabinde yasal olarak kuruluşumuzu tamamladık.
+                </p>
+
+                <p data-lang="about_text_4">
+                    Vakfımız kültür, sanat ve akademik alandaki çalışmaları
+                    önceleyerek bu bağlamda hak ihlallerini görünür kılmayı
+                    ve toplum üzerinde etkili olan bu mekanizmaları
+                    güçlendirerek etkili bir sivil toplum örgütü olmayı
+                    hedeflemektedir. Öncelikli ilgi alanlarımız insan
+                    hakları, kültür sanat, akademisyenler ve araştırmacılar,
+                    gençler, kadınlar ve sivil toplum kuruluşları/çalışanlarıdır.
+                </p>
+
+            </section>
+
+
+            <!-- ==========================================
+                 MİSYON / VİZYON
+            =========================================== -->
+
+            <section
+                id="misyon"
+                class="about-section">
+
+                <h2 data-lang="mission_title">
+                    Misyonumuz/Vizyonumuz
+                </h2>
+
+                <div class="red-line"></div>
+
+                <div class="quote-box">
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                    <p data-lang="mission_quote">
+                        Bilim, kültür ve sanatın özgürce üretildiği;
+                        ayrımcılığın olmadığı, çoğulcu, demokratik ve
+                        dayanışmacı bir toplumun oluşmasına katkı sunmak.
+                        Kürtlerle ilgili bilimsel, kültürel ve sanatsal
+                        üretim yapan aktörlerin güçlendiği ve kendilerini
+                        özgürce ifade edebildiği kolektif alanların
+                        gelişmesini desteklemek.
+                    </p>
+
+                </div>
+
+
+                <p data-lang="vision_text">
+                    Vizyonumuz; Kürtler ile ilgili bilim, kültür ve sanat
+                    alanında her türlü baskının ortadan kalktığı, bu alanlarda
+                    faaliyet gösteren aktörlerin güçlendiği, ayrımcılığa
+                    uğramadan özgürce üretim yapabildiği, çalışmalarını
+                    sergileyecek kolektif alanlara kavuştuğu, bilim, kültür
+                    ve sanatın etkin rol oynadığı demokratik, çoğulcu bir
+                    toplum inşa etmek.
+                </p>
+
+
+                <p data-lang="values_text">
+                    Temel değerlerimiz; Vakfımız evrensel insan hakları ve
+                    demokrasi ilkelerine ve bu temelde ulusal ve uluslararası
+                    sözleşmelere bağlı kalmayı, cinsiyet eşitliği, ifade
+                    özgürlüğü, çevre, iklim, küresel ısınma, yoksulluk,
+                    hayvan hakları dahil olmak üzere küresel boyutta yaşanan
+                    sorunlara karşı etik ve evrensel ilkeleri esas alan
+                    politikaları benimsemeyi ve bu alanlarda yapılacak olan
+                    üretime katkıda bulunmayı temel değerler olarak benimser.
+                </p>
+
+
+                <p>
+
+                    <strong data-lang="mission_label">
+                        Misyonumuz;
+                    </strong>
+
+                    <span data-lang="mission_intro">
+                        Ban Vakfı, Bilim, kültür, sanat alanında aktörler arası
+                        dayanışmayı, etkileşimi güçlendirmeyi, çalışmaların
+                        desteklenmesi ve sergilenmesi için gereken mekanizma
+                        ve araçları oluşturmayı, kapsayıcı bir çatı örgütü
+                        olmayı;
+                    </span>
+
+                </p>
+
+
+                <p data-lang="mission_point_1">
+                    • Kürt çalışmaları alanında üretim yapmak isteyen ama
+                    alan bulamayan aktörlere alan açmayı;
+                </p>
+
+                <p data-lang="mission_point_2">
+                    • Üyeleri, çalışanları ve gönüllülerinin de gelişimini
+                    destekleyici faaliyetleri hayata geçirmeyi, bileşenlerin
+                    kapasitelerini arttırıcı, yeteneklerini geliştirici
+                    çalışmalar yapmayı;
+                </p>
+
+                <p data-lang="mission_point_3">
+                    • Faaliyetleri kapsamında sempozyum, konferans, panel,
+                    atölye ve söyleşiler düzenlemeyi, hak ihlallerini
+                    raporlama, izleme ve savunuculuk faaliyetlerinde bulunmayı;
+                </p>
+
+                <p data-lang="mission_point_4">
+                    • Cinsiyet eşitliğini destekleyen ve geliştiren
+                    perspektiften hareketle çalışmalarında, kadınları,
+                    gençleri ve çocukları önceleyen faaliyetlerde bulunmayı;
+                </p>
+
+                <p data-lang="mission_point_5">
+                    • Çevre, iklim, küresel ısınma, hayvan hakları dahil
+                    olmak üzere küresel boyutta yaşanan sorunlara karşı
+                    politika üretimine katkıda bulunacak kültürel ve
+                    sanatsal faaliyetler yürütmeyi hedefler.
+                </p>
+
+            </section>
+
+
+            <!-- ==========================================
+                 ORGANİZASYON
+            =========================================== -->
+
+            <section
+                id="organizasyon"
+                class="about-section">
+
+                <h2 data-lang="organization_title">
+                    Organizasyon Şeması
+                </h2>
+
+                <div class="red-line"></div>
+
+                <p data-lang="organization_text">
+                    BAN Vakfı'nın kurumsal yapısı; vakıf kurucuları,
+                    Mütevelli Heyeti, Yönetim Kurulu, Yedek Yönetim ve
+                    Denetim Kurulu'ndan oluşmaktadır.
+                </p>
+
+
+                <div class="organization-wrapper">
+
+                    <div class="real-org-chart">
+
+
+                        <!-- BAN VAKFI -->
+
+                        <div class="org-main-box">
+
+                            <i class="fa-solid fa-building-columns"></i>
+
+                            <strong>
+                                BAN VAKFI
+                            </strong>
+
+                            <span data-lang="org_structure">
+                                Kurumsal yapı
+                            </span>
+
+                        </div>
+
+
+                        <div class="org-main-line"></div>
+
+
+                        <!-- MÜTEVELLİ HEYETİ -->
+
+                        <div class="org-card">
+
+                            <div class="org-card-header">
+
+                                <i class="fa-solid fa-users"></i>
+
+                                <div>
+
+                                    <h3 data-lang="org_trustees">
+                                        Mütevelli Heyeti
+                                    </h3>
+
+                                    <span data-lang="org_7_people">
+                                        7 kişi
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <ul>
+                                <li>Ruşen Arslan</li>
+                                <li>Mükrime Tepe</li>
+                                <li>Metin Kaygalak</li>
+                                <li>Osman Akan</li>
+                                <li>İhsan Kurt</li>
+                                <li>Ferda Önen Cemri</li>
+                                <li>Diyar Arcan</li>
+                            </ul>
+
+                        </div>
+
+
+                        <div class="org-connector"></div>
+
+
+                        <!-- YÖNETİM KURULU -->
+
+                        <div class="org-card management-card">
+
+                            <div class="org-card-header">
+
+                                <i class="fa-solid fa-people-roof"></i>
+
+                                <div>
+
+                                    <h3 data-lang="org_board">
+                                        Vakıf Yönetim Kurulu
+                                    </h3>
+
+                                    <span data-lang="org_7_full_members">
+                                        7 asil üye
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="management-list">
+
+
+                                <div class="management-person president">
+
+                                    <span class="person-name">
+                                        Ayşe Tepe Doğan
+                                    </span>
+
+                                    <span
+                                        class="person-role"
+                                        data-lang="role_president">
+                                        Yönetim Kurulu Başkanı
+                                    </span>
+
+                                </div>
+
+
+                                <div class="management-person">
+
+                                    <span class="person-name">
+                                        Ekrem Altun
+                                    </span>
+
+                                    <span
+                                        class="person-role"
+                                        data-lang="role_vice_president">
+                                        Başkan Yardımcısı
+                                    </span>
+
+                                </div>
+
+
+                                <div class="management-person">
+
+                                    <span class="person-name">
+                                        Hasan Alıcı
+                                    </span>
+
+                                    <span
+                                        class="person-role"
+                                        data-lang="role_treasurer">
+                                        Sayman
+                                    </span>
+
+                                </div>
+
+
+                                <div class="management-person">
+
+                                    <span class="person-name">
+                                        Gül Hür
+                                    </span>
+
+                                    <span
+                                        class="person-role"
+                                        data-lang="role_board_member">
+                                        YK Üyesi
+                                    </span>
+
+                                </div>
+
+
+                                <div class="management-person">
+
+                                    <span class="person-name">
+                                        Hilal Laleş Aydın
+                                    </span>
+
+                                    <span
+                                        class="person-role"
+                                        data-lang="role_board_member">
+                                        YK Üyesi
+                                    </span>
+
+                                </div>
+
+
+                                <div class="management-person">
+
+                                    <span class="person-name">
+                                        Berfin Zenderlioğlu
+                                    </span>
+
+                                    <span
+                                        class="person-role"
+                                        data-lang="role_board_member">
+                                        YK Üyesi
+                                    </span>
+
+                                </div>
+
+
+                                <div class="management-person">
+
+                                    <span class="person-name">
+                                        Şener Özmen
+                                    </span>
+
+                                    <span
+                                        class="person-role"
+                                        data-lang="role_board_member">
+                                        YK Üyesi
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="org-connector"></div>
+
+
+                        <!-- DENETİM KURULU -->
+
+                        <div class="org-card">
+
+                            <div class="org-card-header">
+
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                                <div>
+
+                                    <h3 data-lang="org_audit">
+                                        Denetim Kurulu
+                                    </h3>
+
+                                    <span data-lang="org_3_people">
+                                        3 kişi
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <ul>
+                                <li>Metin Kaygalak</li>
+                                <li>Diyar Arcan</li>
+                                <li>Mizgin Doğan</li>
+                            </ul>
+
+                        </div>
+
+
+                        <div class="org-connector"></div>
+
+
+                        <!-- YEDEK YÖNETİM -->
+
+                        <div class="org-card reserve-card">
+
+                            <div class="org-card-header">
+
+                                <i class="fa-solid fa-user-group"></i>
+
+                                <div>
+
+                                    <h3 data-lang="org_reserve">
+                                        Yedek Yönetim
+                                    </h3>
+
+                                    <span data-lang="org_4_people">
+                                        4 kişi
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="reserve-list">
+
+                                <div>
+                                    <span>01</span>
+                                    Zeynep Yaş Salam
+                                </div>
+
+                                <div>
+                                    <span>02</span>
+                                    Dilan Özalp
+                                </div>
+
+                                <div>
+                                    <span>03</span>
+                                    Hatice Kılıç
+                                </div>
+
+                                <div>
+                                    <span>04</span>
+                                    Kübra Sağır
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="org-connector"></div>
+
+
+                        <!-- VAKIF KURUCULARI -->
+
+                        <div class="founders-section">
+
+                            <div class="founders-title">
+
+                                <i class="fa-solid fa-handshake"></i>
+
+                                <div>
+
+                                    <h3 data-lang="org_founders">
+                                        Vakıf Kurucuları
+                                    </h3>
+
+                                    <span data-lang="org_founders_description">
+                                        BAN Vakfı'nın kurucu üyeleri
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="founders-grid">
+
+                                <div>Ruşen Arslan</div>
+                                <div>Mükrime Tepe</div>
+                                <div>Ayşe Tepe Doğan</div>
+                                <div>Berfin Zenderlioğlu</div>
+                                <div>Diyar Arcan</div>
+                                <div>İhsan Kurt</div>
+                                <div>Şener Özmen</div>
+                                <div>Zelal Özmen</div>
+                                <div>Metin Kaygalak</div>
+                                <div>Hilal Laleş Aydın</div>
+                                <div>Hatice Kılıç</div>
+                                <div>Dilan Şevqi Özalp</div>
+                                <div>Ekrem Altun</div>
+                                <div>Gül Hür</div>
+                                <div>Osman Akan</div>
+                                <div>Ferda Önen Cemri</div>
+                                <div>Kübra Sağır</div>
+                                <div>Zeynep Yaş</div>
+                                <div>Nilgün Sevim Emiroğlu</div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 VAKIF SENEDİ
+            =========================================== -->
+
+            <section
+                id="vakif-senedi"
+                class="about-section">
+
+                <h2 data-lang="charter_title">
+                    Vakıf Senedi
+                </h2>
+
+                <div class="red-line"></div>
+
+                <p data-lang="charter_description">
+                    BAN Vakfı'nın kuruluşuna ve hukuki yapısına ilişkin
+                    Vakıf Senedi'ne aşağıdaki bağlantı üzerinden
+                    ulaşabilirsiniz.
+                </p>
+
+
+                <div class="document-list">
+
+                    <a
+                        href="ban dosylar/tr/Vakıf Senedi Türkçe.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="document-card">
+
+                        <div class="document-icon">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+
+                        <div class="document-info">
+
+                            <h3 data-lang="charter_document">
+                                Vakıf Senedi
+                            </h3>
+
+                            <span data-lang="view_pdf">
+                                PDF Belgesini Görüntüle
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right document-arrow"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 POLİTİKALAR
+            =========================================== -->
+
+            <section
+                id="politikalar"
+                class="about-section">
+
+                <h2 data-lang="policy_title">
+                    Politika Belgelerimiz
+                </h2>
+
+                <div class="red-line"></div>
+
+                <p data-lang="policy_description">
+                    BAN Vakfı'nın politika ve belgeleri aşağıda yer almaktadır.
+                </p>
+
+
+                <div class="document-list">
+
+
+                    <!-- ÇALIŞAN HAKLARI -->
+
+                    <a
+                        href="ban dosylar/tr/Çalışan politika belgesi.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="document-card">
+
+                        <div class="document-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+
+                        <div class="document-info">
+
+                            <h3 data-lang="policy_employee">
+                                Çalışan Hakları Politikası
+                            </h3>
+
+                            <span data-lang="view_pdf">
+                                PDF Belgesini Görüntüle
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right document-arrow"></i>
+
+                    </a>
+
+
+                    <!-- CİNSİYET EŞİTLİĞİ -->
+
+                    <a
+                        href="ban dosylar/tr/Ban Vakfı_Toplumsal Cinsiyet Politika Belgesi.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="document-card">
+
+                        <div class="document-icon">
+                            <i class="fa-solid fa-venus-mars"></i>
+                        </div>
+
+                        <div class="document-info">
+
+                            <h3 data-lang="policy_gender">
+                                Cinsiyet Eşitlik Politikası
+                            </h3>
+
+                            <span data-lang="view_pdf">
+                                PDF Belgesini Görüntüle
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right document-arrow"></i>
+
+                    </a>
+
+
+                    <!-- BAĞIŞ VE ETİK -->
+
+                    <a
+                        href="ban dosylar/tr/ETİK.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="document-card">
+
+                        <div class="document-icon">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+
+                        <div class="document-info">
+
+                            <h3 data-lang="policy_ethics">
+                                Bağış ve Etik Politikası
+                            </h3>
+
+                            <span data-lang="view_pdf">
+                                PDF Belgesini Görüntüle
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right document-arrow"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 GELİR GİDER
+            =========================================== -->
+
+            <section
+                id="gelir-gider"
+                class="about-section">
+
+                <h2 data-lang="finance_title">
+                    Gelir – Gider Tabloları
+                </h2>
+
+                <div class="red-line"></div>
+
+                <p
+                    class="financial-intro"
+                    data-lang="finance_description">
+                    BAN Vakfı'nın mali yapısına ilişkin gelir ve gider
+                    tablolarına aşağıdaki belgeler üzerinden ulaşabilirsiniz.
+                </p>
+
+
+                <div class="finance-grid">
+
+
+                    <!-- 2024 -->
+
+                    <div class="finance-card">
+
+                        <div class="finance-icon">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+
+                        <div>
+
+                            <h3 data-lang="finance_2024">
+                                2024 Gelir Gider Tablosu
+                            </h3>
+
+                            <p data-lang="finance_info">
+                                Gelir Gider bilgileri
+                            </p>
+
+                        </div>
+
+                        <a
+                            class="finance-link"
+                            href="ban dosylar/BAN VAKFI 2024 YILI GELİR-GİDER TABLOSU.xlsx"
+                            target="_blank"
+                            rel="noopener"
+                            data-lang="view">
+                            Görüntüle →
+                        </a>
+
+                    </div>
+
+
+                    <!-- 2025 -->
+
+                    <div class="finance-card">
+
+                        <div class="finance-icon">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+
+                        <div>
+
+                            <h3 data-lang="finance_2025">
+                                2025 Gelir Gider Tablosu
+                            </h3>
+
+                            <p data-lang="finance_info">
+                                Gelir Gider bilgileri
+                            </p>
+
+                        </div>
+
+                        <a
+                            class="finance-link"
+                            href="ban dosylar/BAN VAKFI 2025 YILI GELİR-GİDER TABLOSU.xlsx"
+                            target="_blank"
+                            rel="noopener"
+                            data-lang="view">
+                            Görüntüle →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+                 KVKK
+            =========================================== -->
+
+            <section
+                id="kvkk"
+                class="about-section">
+
+                <h2 data-lang="kvkk_title">
+                    KVKK ve Kişisel Verilerin Korunması
+                </h2>
+
+                <div class="red-line"></div>
+
+                <p data-lang="kvkk_description">
+                    Kişisel verilerin işlenmesi, saklanması ve korunmasına
+                    ilişkin politika ve bilgilendirmelerimize aşağıdan
+                    ulaşabilirsiniz.
+                </p>
+
+
+                <div class="document-list">
+
+                    <a
+                        href="ban dosylar/tr/BAN KVKK.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        class="document-card">
+
+                        <div class="document-icon">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+
+                        <div class="document-info">
+
+                            <h3 data-lang="kvkk_document">
+                                KVKK ve Kişisel Verilerin Korunması
+                            </h3>
+
+                            <span data-lang="view_pdf">
+                                PDF Belgesini Görüntüle
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right document-arrow"></i>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</section>
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+
+        <!-- =====================================================
+             1. KOLON : HAKKIMIZDA
+             ===================================================== -->
+
+        <div class="footer-col footer-about">
+
+            <h3 data-lang="footer_brand">
+                BAN Vakfı
+            </h3>
+
+            <p data-lang="footer_about_text">
+                Bilgi üretimini, kültürel çeşitliliği ve
+                nitelikli dijital yayıncılığı destekleyen
+                bağımsız bir blog & podcast platformu.
+            </p>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             2. KOLON : HIZLI MENÜ
+             ===================================================== -->
+
+        <div class="footer-col">
+
+            <h4 data-lang="footer_menu_title">
+                Hızlı Menü
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="index.html"
+                        data-lang="footer_home"
+                    >
+                        Ana Sayfa
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="rapor.html"
+                        data-lang="footer_reports"
+                    >
+                        Raporlar
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="index.html#podcast"
+                        data-lang="footer_podcast"
+                    >
+                        Podcast
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="index.html#about"
+                        data-lang="footer_about"
+                    >
+                        Hakkımızda
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="index.html#contact"
+                        data-lang="footer_contact"
+                    >
+                        İletişim
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             3. KOLON : YAYINLAR
+             ===================================================== -->
+
+        <div class="footer-col">
+
+            <h4 data-lang="footer_publications_title">
+                Yayınlarımız
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="rapor.html"
+                        data-lang="footer_reports"
+                    >
+                        Raporlar
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        href="podcast.html"
+                        data-lang="footer_podcast_episodes"
+                    >
+                        Podcast Bölümleri
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             4. KOLON : YASAL + SOSYAL
+             ===================================================== -->
+
+        <div class="footer-col">
+
+
+            <!-- YASAL -->
+
+            <h4 data-lang="footer_legal_title">
+                Yasal Bilgilendirme
+            </h4>
+
+
+            <ul class="footer-legal">
+
+                <li>
+
+                    <a
+                        href="ban dosylar/tr/BAN KVKK.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-lang="footer_kvkk"
+                    >
+                        KVKK Aydınlatma Metni
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a
+                        href="ban dosylar/tr/BAN KVKK.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-lang="footer_privacy"
+                    >
+                        Gizlilik Politikası
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+
+            <!-- SOSYAL MEDYA -->
+
+            <h4
+                class="footer-social-title"
+                data-lang="footer_social_title"
+            >
+                Bizi Takip Edin
+            </h4>
+
+
+            <div class="footer-socials">
+
+
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="https://www.instagram.com/weqfa_ban/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    data-lang-aria="social_instagram"
+                >
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+
+                <!-- X -->
+
+                <a
+                    href="https://x.com/banvakfi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X"
+                    data-lang-aria="social_x"
+                >
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+
+
+                <!-- SPOTIFY -->
+
+                <a
+                    href="https://open.spotify.com/show/7p68ISUEB62W9hC2dD6zTM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Spotify"
+                    data-lang-aria="social_spotify"
+                >
+
+                    <i class="fa-brands fa-spotify"></i>
+
+                </a>
+
+
+
+                <!-- YOUTUBE -->
+
+                <a
+                    href="https://www.youtube.com/@BanVakf%C4%B1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    data-lang-aria="social_youtube"
+                >
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+
+
+                <!-- APPLE PODCASTS -->
+
+                <a
+                    href="https://podcasts.apple.com/tr/podcast/bane%C5%9Fan/id1896906237?l=tr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Apple Podcasts"
+                    data-lang-aria="social_apple"
+                >
+
+                    <i class="fa-solid fa-podcast"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER ALT BAR
+         ===================================================== -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p data-lang="footer_copyright">
+                © 2026 BAN Vakfı. Tüm Hakları Saklıdır.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+
+/* =====================================================
+   SOL MENÜ - AKTİF SECTION
+   ===================================================== */
+
+const sections = document.querySelectorAll(".about-section");
+const navLinks = document.querySelectorAll(".about-nav-link");
+
+function updateActiveSection() {
+
+    let current = "";
+
+    const scrollPosition = window.scrollY + 180;
+
+    sections.forEach(section => {
+
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+
+        if (
+            scrollPosition >= top &&
+            scrollPosition < bottom
+        ) {
+            current = section.id;
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (
+            link.getAttribute("href") === "#" + current
+        ) {
+            link.classList.add("active");
+        }
+
+    });
+
+}
+
+window.addEventListener(
+    "scroll",
+    updateActiveSection,
+    {
+        passive: true
+    }
+);
+
+updateActiveSection();
+
+</script>
+
+
+<!-- DİL SİSTEMİ -->
+
+<script src="script.js"></script>
+<script src="tr.js"></script>
+<script src="ku.js"></script>
+<script src="en.js"></script>
+
+</body>
+
+</html>

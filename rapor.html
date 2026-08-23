@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAN Vakfı</title>
+   <link
+    rel="icon"
+    type="image/png"
+    href="logo/ban_logo_tr.png"
+>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+      <style>
+      .about-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:40px;
+}
+
+.about-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.about-card:hover{
+    transform:translateY(-10px);
+}
+
+.about-icon{
+    width:80px;
+    height:80px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:#bf1e2e;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+}
+
+.about-card h3{
+    margin-bottom:15px;
+    color:#222;
+}
+
+.about-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.about-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#bf1e2e;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+    font-weight:500;
+}
+
+.about-btn:hover{
+    background:#bf1e2e;
+    transform:translateY(-2px);
+}
+
+
+.video-hero{
+    position:relative;
+    height:500px;
+    overflow:hidden;
+}
+
+.slider{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.video-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.4);
+    z-index:2;
+}
+
+.video-content{
+    position:absolute;
+    inset:0;
+    z-index:3;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+}
+
+
+.podcast-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.podcast-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 14px 30px;
+    background: #bf1e2e;
+    color: #fff;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 50px;
+
+    box-shadow: 0 8px 20px rgba(191, 30, 46, 0.20);
+    transition: all 0.3s ease;
+}
+
+.podcast-more-btn:hover {
+    background: #a81827;
+    transform: translateY(-3px);
+}
+
+.podcast-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.podcast-more-btn:hover i {
+    transform: translateX(5px);
+}
+
+.podcast-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* Genel grid ve başlık */
+  .podcast-section {
+    padding: 60px 20px;
+    background: #fdfdfd;
+    text-align: center;
+  }
+
+  .podcast-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+  }
+
+  /* Grid ayarı */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 576px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Kişi kartı */
+  .team-member {
+    text-align: center;
+    transition: transform 0.3s;
+  }
+
+  .team-member:hover {
+    transform: translateY(-10px);
+  }
+
+  /* Çember ve fotoğraf */
+  .circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .team-member:hover .circle {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  /* Canlı sıcak renkler */
+  .bg1 { background: #FF6B6B; }   /* kırmızımsı */
+  .bg2 { background: #FF9F43; }   /* turuncu */
+  .bg3 { background: #FFD93D; }   /* sarı */
+  .bg4 { background: #6BCB77; }   /* yeşil */
+  .bg5 { background: #4D96FF; }   /* mavi */
+  .bg6 { background: #9B5DE5; }   /* mor */
+  .bg7 { background: #F15BB5; }   /* pembe */
+  .bg8 { background: #FF7B00; }   /* turuncu parlak */
+  .bg9 { background: #00C2C7; }   /* turkuaz */
+  .bg10 { background: #FF3C38; }  /* kırmızı parlak */
+  .bg11 { background: #FFE156; }  /* sarı parlak */
+  .bg12 { background: #6A4C93; }  /* mor koyu */
+
+  /* İsim ve unvan */
+  .team-member h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    color: #222;
+  }
+
+  .team-member span {
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  .logo img.logo-img {
+    height: 100px;
+    width: auto;
+    display: block;
+}
+      
+
+       
+.reports-hero {
+    padding-top: 110px;
+    padding-bottom: 30px;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f5f5f6
+    );
+}
+
+.reports-hero span {
+    display: inline-block;
+    color: #bf1e2e;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.reports-hero h1 {
+    font-size: clamp(34px, 5vw, 52px);
+    color: #222;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.reports-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+        /* ================================
+           RAPORLAR ALANI
+        ================================= */
+
+        .reports-section {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 25px 70px;
+}
+
+        /* GRID */
+
+        .reports-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 35px;
+        }
+
+
+        /* ================================
+           RAPOR KARTI
+        ================================= */
+
+        .report-card {
+
+            background: #fff;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .report-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 45px rgba(0,0,0,0.13);
+        }
+
+
+/* ==========================================
+   RAPOR FOTOĞRAFI
+========================================== */
+
+.report-cover {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    line-height: 0;
+}
+
+.report-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: initial;
+    transition: transform 0.4s ease;
+}
+
+/* Hafif hover efekti */
+.report-card:hover .report-cover img {
+    transform: scale(1.02);
+}
+        /* KATEGORİ */
+
+        .report-category {
+
+            position: absolute;
+
+            top: 18px;
+            left: 18px;
+
+            background: #bf1e2e;
+
+            color: #fff;
+
+            padding: 7px 14px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+        }
+
+
+        /* ================================
+           RAPOR İÇERİĞİ
+        ================================= */
+
+        .report-content {
+
+            padding: 28px;
+        }
+
+
+        .report-date {
+
+            color: #bf1e2e;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            margin-bottom: 10px;
+        }
+
+
+        .report-content h2 {
+
+            font-size: 21px;
+
+            line-height: 1.45;
+
+            color: #222;
+
+            margin-bottom: 14px;
+        }
+
+
+        .report-content p {
+
+            color: #666;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+
+            display: -webkit-box;
+
+            -webkit-line-clamp: 3;
+
+            -webkit-box-orient: vertical;
+
+            overflow: hidden;
+        }
+
+
+        /* YAZAR */
+
+        .report-author {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: #777;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+        .report-author i {
+
+            color: #bf1e2e;
+        }
+
+
+        /* BUTON */
+
+        .report-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 12px 20px;
+
+            background: #bf1e2e;
+
+            color: #fff;
+
+            border-radius: 30px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .report-button:hover {
+
+            background: #a81827;
+
+            transform: translateY(-2px);
+        }
+
+        .report-button i {
+
+            transition: transform 0.3s;
+        }
+
+        .report-button:hover i {
+
+            transform: translateX(4px);
+        }
+
+
+        /* ================================
+           RAPOR DETAY SAYFASI
+        ================================= */
+
+        
+.report-detail {
+    display: none;
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 25px 50px;
+}
+
+        .report-detail.active {
+
+            display: block;
+        }
+
+
+       .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #bf1e2e;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+
+.detail-category {
+    color: #bf1e2e;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.report-detail h1 {
+    font-size: clamp(30px, 5vw, 45px);
+    line-height: 1.3;
+    margin: 0 0 15px 0;
+    color: #222;
+}
+
+.detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.detail-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+        /* PDF BUTONLARI */
+
+        .pdf-buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 40px;
+        }
+
+
+        .pdf-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 13px 22px;
+
+            border-radius: 30px;
+
+            background: #bf1e2e;
+
+            color: #fff;
+
+            font-weight: 600;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .pdf-button:hover {
+
+            background: #a81827;
+
+            transform: translateY(-2px);
+        }
+
+
+        .pdf-button.secondary {
+
+            background: #222;
+        }
+
+
+        /* PDF */
+
+        .pdf-viewer {
+
+            width: 100%;
+
+            height: 750px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.10);
+
+            background: #fff;
+        }
+
+
+       
+
+        /* ================================
+           TABLET
+        ================================= */
+
+        @media (max-width: 1000px) {
+
+            .reports-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* ================================
+           MOBİL
+        ================================= */
+
+        @media (max-width: 650px) {
+
+            .navbar {
+
+                height: 80px;
+
+                padding: 0 20px;
+            }
+
+            .logo img {
+
+                height: 65px;
+            }
+
+            .mobile-menu {
+
+                top: 80px;
+
+                height: calc(100vh - 80px);
+
+                width: 100%;
+            }
+
+            .reports-hero {
+    padding-top: 100px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+            .reports-section {
+
+                padding:
+                    40px 20px 70px;
+            }
+
+            .reports-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+            }
+
+            .report-cover {
+
+                height: 400px;
+            }
+
+            .report-detail {
+
+                padding:
+                    120px 20px 60px;
+            }
+
+            .pdf-viewer {
+
+                height: 550px;
+            }
+
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <a href="index.html">
+            <img
+                id="siteLogo"
+                src="logo/ban_logo_tr.png"
+                alt="BAN Vakfı Logo"
+                class="logo-img"
+            >
+        </a>
+    </div>
+
+
+    <!-- SAĞ TARAF -->
+    <div class="nav-right">
+
+        <!-- DİL SEÇİMİ -->
+        <div class="language-selector">
+
+            <button
+                type="button"
+                class="language-button"
+                id="languageButton">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span id="currentLanguage">TR</span>
+
+                <i class="fa-solid fa-chevron-down language-arrow"></i>
+
+            </button>
+
+
+            <div class="language-dropdown" id="languageDropdown">
+
+                <button
+                    type="button"
+                    class="language-option active"
+                    onclick="changeLang('tr')"
+                    data-language="tr">
+
+                    <span>TR</span>
+                    <small>Türkçe</small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="language-option"
+                    onclick="changeLang('ku')"
+                    data-language="ku">
+
+                    <span>KU</span>
+                    <small>Kurdî</small>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="language-option"
+                    onclick="changeLang('en')"
+                    data-language="en">
+
+                    <span>EN</span>
+                    <small>English</small>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BURGER -->
+        <button
+            class="burger"
+            id="burger"
+            type="button"
+            aria-label="Menüyü aç">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MENÜ -->
+    <nav class="mobile-menu" id="mobileMenu">
+
+        <div class="menu-header">
+
+            <span data-lang="menu_title">
+               
+            </span>
+
+            <span class="menu-line"></span>
+
+        </div>
+
+
+        <a href="index.html" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-house"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_home">
+                BAN
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="index.html#about" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-circle-info"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_about">
+                Hakkımızda
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="index.html#podcast" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-microphone"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_podcast">
+                Podcast
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="index.html#project" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_projects">
+                Projeler
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="rapor.html" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_reports">
+                Raporlar
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <a href="index.html#contact" class="menu-link">
+
+            <span class="menu-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+
+            <span
+                class="menu-text"
+                data-lang="menu_contact">
+                İletişim
+            </span>
+
+            <i class="fa-solid fa-arrow-right menu-arrow"></i>
+
+        </a>
+
+
+        <div class="menu-footer">
+
+            <span>
+                BAN Vakfı
+            </span>
+
+            <span>
+                © 2026
+            </span>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+
+<!-- ==========================================
+     RAPORLAR BAŞLIK
+=========================================== -->
+
+<section class="reports-hero">
+
+    
+
+    <h1>Raporlar</h1>
+
+    <p>
+        BAN Vakfı tarafından hazırlanan araştırma,
+        değerlendirme ve raporlara buradan
+        ulaşabilirsiniz.
+    </p>
+
+</section>
+
+
+
+<!-- ==========================================
+     RAPORLAR
+=========================================== -->
+
+<section class="reports-section"
+         id="reportsSection">
+
+
+    <div class="reports-grid">
+
+
+        <!-- RAPOR 1 -->
+
+        <article class="report-card">
+
+            <div class="report-cover">
+
+                <img
+                    src="ban_rapor/WhatsApp Image 2026-08-14 at 20.38.16.jpeg"
+                    alt="Rapor 1"
+                >
+
+
+            </div>
+
+
+            <div class="report-content">
+
+                <div class="report-date">
+                    2026
+                </div>
+
+                <h2>
+                    Sivil Toplum Çalıştayı Raporu
+                </h2>
+
+                <p>
+                   Sivil Toplum Çalıştayı Raporu, sivil toplum kuruluşlarının deneyimlerini, ihtiyaçlarını ve karşılaştıkları sorunları ele alarak ortak çözüm önerileri geliştirmeyi amaçlayan çalıştayın çıktılarını içermektedir. Raporda, sivil toplumun güçlendirilmesine yönelik değerlendirmeler ve öneriler sunulmaktadır.
+                </p>
+
+
+                <div class="report-author">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    BAN Vakfı
+
+                </div>
+
+
+                <a href="#"
+                   class="report-button"
+                   onclick="showReport(1); return false;">
+
+                    Raporu İncele
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+     
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     RAPOR DETAY
+=========================================== -->
+
+<section class="report-detail"
+         id="reportDetail">
+
+
+    <div class="back-button"
+         onclick="closeReport()">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Tüm Raporlara Dön
+
+    </div>
+
+
+  
+
+    <h1 id="detailTitle">
+
+        Rapor Başlığı
+
+    </h1>
+
+
+    <div class="detail-meta">
+
+        <div>
+
+            <strong>Yazar:</strong>
+
+            <span id="detailAuthor">
+                BAN Vakfı
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>Yayın Tarihi:</strong>
+
+            <span id="detailDate">
+                2026
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>Yayıncı:</strong>
+
+            BAN Vakfı
+
+        </div>
+
+    </div>
+
+
+    <div class="detail-description"
+         id="detailDescription">
+
+        Rapor açıklaması burada yer alacaktır.
+
+    </div>
+
+
+    <div class="pdf-buttons">
+
+        <a href="#"
+           id="pdfOpen"
+           target="_blank"
+           class="pdf-button">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+            PDF'yi Aç
+
+        </a>
+
+
+        <a href="#"
+           id="pdfDownload"
+           download
+           class="pdf-button secondary">
+
+            <i class="fa-solid fa-download"></i>
+
+            PDF'yi İndir
+
+        </a>
+
+    </div>
+
+
+    <iframe
+        id="pdfViewer"
+        class="pdf-viewer"
+        src="">
+    </iframe>
+
+
+</section>
+
+
+
+
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <!-- 1. KOLON : HAKKIMIZDA -->
+        <div class="footer-col footer-about">
+
+            <h3>BAN Vakfı</h3>
+
+            <p data-lang="footer_about_text">
+                Bilgi üretimini, kültürel çeşitliliği ve
+                nitelikli dijital yayıncılığı destekleyen
+                bağımsız bir blog & podcast platformu.
+            </p>
+
+        </div>
+
+
+        <!-- 2. KOLON : HIZLI MENÜ -->
+        <div class="footer-col">
+
+            <h4 data-lang="footer_menu_title">
+                Hızlı Menü
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="#home">
+                        Ana Sayfa
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#blog">
+                        Raporlar
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#podcast">
+                        Podcast
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        Hakkımızda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        İletişim
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 3. KOLON : YAYINLAR -->
+        <div class="footer-col">
+
+            <h4>
+                Yayınlarımız
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="#blog">
+                        Raporlar
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#podcast">
+                        Podcast Bölümleri
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 4. KOLON : YASAL + SOSYAL -->
+        <div class="footer-col">
+
+            <h4>
+                Yasal Bilgilendirme
+            </h4>
+
+            <ul class="footer-legal">
+
+                <li>
+                    <a
+                        href="ban dosylar/tr/BAN KVKK.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        KVKK Aydınlatma Metni
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="ban dosylar/tr/BAN KVKK.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Gizlilik Politikası
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <h4 class="footer-social-title">
+                Bizi Takip Edin
+            </h4>
+
+            <div class="footer-socials">
+
+                <!-- Instagram -->
+                <a
+                    href="https://www.instagram.com/weqfa_ban/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+                <!-- X -->
+                <a
+                    href="https://x.com/banvakfi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X">
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+
+                <!-- Spotify -->
+                <a
+                    href="https://open.spotify.com/show/7p68ISUEB62W9hC2dD6zTM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Spotify">
+
+                    <i class="fa-brands fa-spotify"></i>
+
+                </a>
+
+
+                <!-- YouTube -->
+                <a
+                    href="https://www.youtube.com/@BanVakf%C4%B1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+
+                <!-- Apple Podcasts -->
+                <a
+                    href="https://podcasts.apple.com/tr/podcast/bane%C5%9Fan/id1896906237?l=tr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Apple Podcasts">
+
+                    <i class="fa-solid fa-podcast"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER ALT BAR -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-container">
+
+            <p data-lang="footer_copyright">
+                © 2026 BAN Vakfı. Tüm Hakları Saklıdır.
+            </p>
+
+            
+               
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<script src="script.js"></script>
+<script src="tr.js"></script>
+<script src="ku.js"></script>
+<script src="en.js"></script>
+</body>
+</html>
+
+  <script>
+
+
+/* ==========================================
+   RAPOR VERİLERİ
+=========================================== */
+
+const reports = {
+
+    1: {
+
+      
+
+        title:
+            "Sivil Toplum Çalıştayı Raporu",
+
+        author:
+            "BAN Vakfı",
+
+        date:
+            "2026",
+
+        description:
+            "Sivil Toplum Çalıştayı Raporu, sivil toplum kuruluşlarının deneyimlerini, ihtiyaçlarını ve karşılaştıkları sorunları ele alarak ortak çözüm önerileri geliştirmeyi amaçlayan çalıştayın çıktılarını içermektedir. Raporda, sivil toplumun güçlendirilmesine yönelik değerlendirmeler ve öneriler sunulmaktadır.",
+
+        pdf:
+            "ban_rapor/Komxebat_BAN.pdf"
+
+    },
+
+
+    
+
+
+
+};
+
+
+
+/* ==========================================
+   RAPORU GÖSTER
+=========================================== */
+
+function showReport(id) {
+
+    const report =
+        reports[id];
+
+
+    document.getElementById("reportsSection")
+        .style.display = "none";
+
+
+    const detail =
+        document.getElementById("reportDetail");
+
+    detail.classList.add("active");
+
+
+ 
+
+
+    document.getElementById("detailTitle")
+        .innerText =
+        report.title;
+
+
+    document.getElementById("detailAuthor")
+        .innerText =
+        report.author;
+
+
+    document.getElementById("detailDate")
+        .innerText =
+        report.date;
+
+
+    document.getElementById("detailDescription")
+        .innerText =
+        report.description;
+
+
+    document.getElementById("pdfViewer")
+        .src =
+        report.pdf;
+
+
+    document.getElementById("pdfOpen")
+        .href =
+        report.pdf;
+
+
+    document.getElementById("pdfDownload")
+        .href =
+        report.pdf;
+
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+
+/* ==========================================
+   RAPORLARA DÖN
+=========================================== */
+
+function closeReport() {
+
+    document.getElementById("reportDetail")
+        .classList.remove("active");
+
+
+    document.getElementById("reportsSection")
+        .style.display = "block";
+
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+
+
+
+</script>
