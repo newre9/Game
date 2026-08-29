@@ -203,7 +203,7 @@ footer_brand:
     "BAN Vakfı",
 
 footer_about_text:
-    "Bilgi üretimini, kültürel çeşitliliği ve nitelikli dijital yayıncılığı destekleyen bağımsız bir blog & podcast platformu.",
+    "BAN Bilim, Kültür ve Sanat Vakfı; kolektif akıl ve çok disiplinli bir yaklaşımla bağımsız bilgi üretimi, sanat ve kültür çalışmalarıyla Kürt kamusal alanında kalıcı ve dönüştürücü bir etki yaratmayı amaçlamaktadır.",
 
 footer_menu_title:
     "Hızlı Menü",

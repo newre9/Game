@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
             else if (lang === "en") {
 
                 logo.src =
-                    "logo/ban_logo_tr.png";
+                    "logo/ban_logo_eng.png";
 
             }
 
@@ -333,19 +333,23 @@ document.addEventListener("DOMContentLoaded", function () {
             "selectedLang",
             lang
         );
-
-
+//rapor için hemen güncelmesi için bu fonksiyon çağırılır 
+           // RAPOR PDF
+    if (typeof updateOpenReportLanguage === "function") {
+        updateOpenReportLanguage();
+    }
         // ---------------------------------------------
         // DROPDOWN KAPAT
         // ---------------------------------------------
 
-        if (languageSelector) {
+         // DROPDOWN KAPAT
+    if (languageSelector) {
+        languageSelector.classList.remove("active");
+    }
 
-            languageSelector.classList.remove(
-                "active"
-            );
-
-        }
+    if (languageDropdown) {
+        languageDropdown.classList.remove("active");
+    }
 
     };
 
